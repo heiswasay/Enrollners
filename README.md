@@ -1,6 +1,6 @@
-# Enrollers
+# Enrollners
 
-One-page website for **Enrollers**, a marketing agency built exclusively for educational institutes in Pakistan: study-abroad consultancies, coaching and test-prep academies, private schools and colleges.
+One-page website for **Enrollners**, a marketing agency built exclusively for educational institutes in Pakistan: study-abroad consultancies, coaching and test-prep academies, private schools and colleges.
 
 Plain HTML, CSS and a little JavaScript in a single `index.html`. No build step. Deployed with GitHub Pages.
 
