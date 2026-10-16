@@ -11,6 +11,7 @@
 <meta property="og:description" content="We turn ad spend into admissions. Marketing exclusively for educational institutes.">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231C1814'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' fill='white' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="images/hero.webp" type="image/webp">
 <script>document.documentElement.classList.add('js')</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,14 +78,21 @@ details[open] .plus{transform:rotate(45deg)}
 .wa-float{position:fixed;right:24px;bottom:24px;z-index:50;width:60px;height:60px;border-radius:50%;background:#1C1814;color:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 18px 40px -14px rgba(28,24,20,.55);transition:transform .35s,background .35s}
 .wa-float:hover{color:#FFFFFF;background:#C2410C;transform:scale(1.06)}
 .hero{position:relative;overflow:hidden;isolation:isolate}
-.hero-bg{position:absolute;inset:0;z-index:-2;background:#F3E7DA url('https://images.unsplash.com/photo-1741699427799-3fbb70fce948?auto=format&fit=crop&w=2200&q=75') center 40%/cover no-repeat;transform:scale(1.06);animation:heroZoom 24s ease-out both}
+.hero-bg{position:absolute;inset:0;z-index:-2;background:#F3E7DA url('images/hero.webp') center 40%/cover no-repeat;transform:scale(1.06);animation:heroZoom 24s ease-out both}
 .hero-veil{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.92) 38%,rgba(255,250,244,.62) 70%,rgba(255,246,238,.45) 100%),linear-gradient(180deg,rgba(255,255,255,0) 70%,#FFFFFF 100%)}
 @keyframes heroZoom{from{transform:scale(1.14)}to{transform:scale(1.04)}}
 @media (max-width:900px){.hero-veil{background:linear-gradient(180deg,rgba(255,255,255,.93) 0%,rgba(255,255,255,.88) 60%,#FFFFFF 100%)}}
+.photo-card{position:relative;overflow:hidden;border-radius:26px;min-height:440px;display:flex;flex-direction:column;justify-content:flex-end;color:#FFFFFF;isolation:isolate;box-shadow:0 30px 60px -40px rgba(80,35,10,.5)}
+.photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.photo-card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(28,24,20,0) 30%,rgba(28,24,20,.55) 62%,rgba(28,24,20,.92) 100%)}
+.photo-card:hover img{transform:scale(1.07)}
+.case-img{display:block;width:calc(100% + 60px);height:210px;margin:-30px -30px 4px;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.case-wrap{overflow:hidden}
+.case-wrap:hover .case-img{transform:scale(1.05)}
 .mbar{display:none}
 .pline{display:block}
 @media (max-width:900px){.nav-links{display:none!important}.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.b2,.b3,.b4{grid-column:span 2}.pline{display:none}}
-@media (max-width:760px){.mbar{display:flex}.wa-float{display:none}.hide-sm{display:none!important}.page{padding-bottom:84px}.nav-cta{display:none!important}}
+@media (max-width:760px){.photo-card{min-height:360px}.mbar{display:flex}.wa-float{display:none}.hide-sm{display:none!important}.page{padding-bottom:84px}.nav-cta{display:none!important}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 
 .js .rv-io{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
@@ -256,6 +264,12 @@ Education marketing · Pakistan
 <div><h3 style="margin: 0; font-size: 21px; font-weight: 600; letter-spacing: -0.02em">Reports count reach, not seats</h3><p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: #6B6158">Impressions and followers look good in a PDF. What you need to know is what each enrolled student cost.</p></div>
 </div>
 </div>
+<figure class="rv" style="grid-column: 1 / -1; position: relative; margin: 8px 0 0">
+<img src="images/college.webp" alt="Students listening to a lecture in a bright university classroom" loading="lazy" width="820" height="461" style="display: block; width: 100%; aspect-ratio: 21 / 8; min-height: 240px; object-fit: cover; border-radius: 26px; box-shadow: 0 30px 60px -38px rgba(80,35,10,.55)">
+<figcaption class="float1" style="position: absolute; left: 20px; bottom: 22px; display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 20px 40px -22px rgba(28,24,20,.45); font-size: 13px; font-weight: 500">
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #DC2626"></span>Inquiry unanswered for 26 hours</figcaption>
+<span class="float2" style="position: absolute; right: 20px; top: 20px; padding: 10px 14px; border-radius: 14px; background: #1C1814; color: #FFFFFF; font-size: 13px; font-weight: 500; box-shadow: 0 20px 40px -22px rgba(28,24,20,.6)">Seat lost to a competitor</span>
+</figure>
 </div>
 </section>
 
@@ -391,25 +405,37 @@ Education marketing · Pakistan
 <h2 style="margin: 18px 0 0; font-size: clamp(36px, 5vw, 62px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 500">One industry. <span class="serif" style="font-style: italic; color: #C2410C">Four kinds</span> of institution.</h2>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 16px">
-<article class="lift rv" style="border-radius: 24px; border: 1px solid rgba(28,24,20,.09); padding: 28px; background: #FFFFFF; display: flex; flex-direction: column; gap: 18px; min-height: 280px">
-<span style="width: 56px; height: 56px; border-radius: 18px; background: #1C1814; color: #F7A072; display: flex; align-items: center; justify-content: center"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></span>
-<h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Study-abroad consultancies</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">Qualified students for UK, Canada and Australia intakes, not window shoppers.</p>
+<article class="photo-card rv">
+<img src="images/study-abroad.webp" alt="Student waiting at an airport gate with a suitcase as a plane takes off" loading="lazy" width="820" height="547">
+<div style="padding: 26px; display: flex; flex-direction: column; gap: 10px">
+<span class="mono" style="align-self: flex-start; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.25); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px)">UK · Canada · Australia</span>
+<h3 style="margin: 4px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15">Study-abroad consultancies</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(255,255,255,.82)">Qualified students for every intake, not window shoppers.</p>
+</div>
 </article>
-<article class="lift rv" style="border-radius: 24px; border: 1px solid rgba(28,24,20,.09); padding: 28px; background: #FFFFFF; display: flex; flex-direction: column; gap: 18px; min-height: 280px">
-<span style="width: 56px; height: 56px; border-radius: 18px; background: #1C1814; color: #F7A072; display: flex; align-items: center; justify-content: center"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6.5A2.5 2.5 0 0 0 4 21.5z"></path><path d="M8 7h8M8 11h6"></path></svg></span>
-<h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Coaching &amp; test-prep academies</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">Full batches for O/A Levels, MDCAT, ECAT, IELTS and more.</p>
+<article class="photo-card rv">
+<img src="images/academy.webp" alt="Three students studying together around laptops" loading="lazy" width="820" height="547">
+<div style="padding: 26px; display: flex; flex-direction: column; gap: 10px">
+<span class="mono" style="align-self: flex-start; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.25); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px)">MDCAT · IELTS · A Levels</span>
+<h3 style="margin: 4px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15">Coaching &amp; test-prep academies</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(255,255,255,.82)">Full batches, filled before the first class starts.</p>
+</div>
 </article>
-<article class="lift rv" style="border-radius: 24px; border: 1px solid rgba(28,24,20,.09); padding: 28px; background: #FFFFFF; display: flex; flex-direction: column; gap: 18px; min-height: 280px">
-<span style="width: 56px; height: 56px; border-radius: 18px; background: #1C1814; color: #F7A072; display: flex; align-items: center; justify-content: center"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11"></path><path d="M10 21v-5h4v5"></path></svg></span>
-<h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Private schools</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">Admission-season campaigns that parents trust enough to book a visit.</p>
+<article class="photo-card rv">
+<img src="images/school.webp" alt="Children raising their hands in a bright school classroom" loading="lazy" width="820" height="547">
+<div style="padding: 26px; display: flex; flex-direction: column; gap: 10px">
+<span class="mono" style="align-self: flex-start; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.25); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px)">Admission season</span>
+<h3 style="margin: 4px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15">Private schools</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(255,255,255,.82)">Campaigns parents trust enough to book a visit.</p>
+</div>
 </article>
-<article class="lift rv" style="border-radius: 24px; border: 1px solid rgba(28,24,20,.09); padding: 28px; background: #FFFFFF; display: flex; flex-direction: column; gap: 18px; min-height: 280px">
-<span style="width: 56px; height: 56px; border-radius: 18px; background: #1C1814; color: #F7A072; display: flex; align-items: center; justify-content: center"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2.5 9 2.5 12 0v-5M22 10v6"></path></svg></span>
-<h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Colleges &amp; universities</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">Program-level campaigns that fill every intake, not just the popular ones.</p>
+<article class="photo-card rv">
+<img src="images/graduates.webp" alt="Graduates in caps and gowns taking a selfie outside a university building" loading="lazy" width="820" height="547">
+<div style="padding: 26px; display: flex; flex-direction: column; gap: 10px">
+<span class="mono" style="align-self: flex-start; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.25); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px)">Every program</span>
+<h3 style="margin: 4px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15">Colleges &amp; universities</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(255,255,255,.82)">Program-level campaigns that fill every intake.</p>
+</div>
 </article>
 </div>
 </div>
@@ -472,8 +498,9 @@ Education marketing · Pakistan
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px">
-<article class="lift rv" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 20px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Study-abroad consultancy</span><span style="font-size: 13px; color: #8A7F75">Example · Karachi</span></div>
+<article class="lift rv case-wrap" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 20px">
+<img class="case-img" src="images/consultation.webp" alt="Students and a counsellor reviewing options together on a laptop" loading="lazy" width="820" height="547">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 12px"><span style="white-space: nowrap; font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Study-abroad consultancy</span><span style="white-space: nowrap; font-size: 13px; color: #8A7F75">Example · Karachi</span></div>
 <h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25">From 40 to 160 qualified leads a month for a UK September intake</h3>
 <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">Leads were arriving, but most were not eligible and replies took a day. The plan: Meta campaigns rebuilt around the UK intake, eligibility questions in the form, and instant WhatsApp follow-up.</p>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(28,24,20,.1)">
@@ -481,8 +508,9 @@ Education marketing · Pakistan
 <div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">38</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">students enrolled</div></div>
 </div>
 </article>
-<article class="lift rv" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 20px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Test-prep academy</span><span style="font-size: 13px; color: #8A7F75">Example · Lahore</span></div>
+<article class="lift rv case-wrap" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 20px">
+<img class="case-img" src="images/exam-prep.webp" alt="Students reading textbooks in a sunlit classroom" loading="lazy" width="820" height="547">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 12px"><span style="white-space: nowrap; font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Test-prep academy</span><span style="white-space: nowrap; font-size: 13px; color: #8A7F75">Example · Lahore</span></div>
 <h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25">Cost per lead cut from Rs 1,450 to Rs 620 for MDCAT batches</h3>
 <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">One generic page was serving every course. The plan: batch-specific landing pages, sharper targeting by city and subject, and a lead pipeline for counsellors.</p>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(28,24,20,.1)">
@@ -490,8 +518,9 @@ Education marketing · Pakistan
 <div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">6</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">batches filled</div></div>
 </div>
 </article>
-<article class="lift rv" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 20px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Private school</span><span style="font-size: 13px; color: #8A7F75">Example · Islamabad</span></div>
+<article class="lift rv case-wrap" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 20px">
+<img class="case-img" src="images/classroom.webp" alt="Teacher presenting to a class of school students" loading="lazy" width="820" height="547">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 12px"><span style="white-space: nowrap; font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Private school</span><span style="white-space: nowrap; font-size: 13px; color: #8A7F75">Example · Islamabad</span></div>
 <h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25">212 campus visits booked in a single admission season</h3>
 <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">Parents were seeing ads but not visiting. The plan: a parent-focused campaign from February to April with online campus-visit booking and WhatsApp reminders.</p>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(28,24,20,.1)">
