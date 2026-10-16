@@ -76,6 +76,11 @@ details[open] .plus{transform:rotate(45deg)}
 .contact-link:hover{color:#C2410C;padding-left:6px}
 .wa-float{position:fixed;right:24px;bottom:24px;z-index:50;width:60px;height:60px;border-radius:50%;background:#1C1814;color:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 18px 40px -14px rgba(28,24,20,.55);transition:transform .35s,background .35s}
 .wa-float:hover{color:#FFFFFF;background:#C2410C;transform:scale(1.06)}
+.hero{position:relative;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2;background:#F3E7DA url('https://images.unsplash.com/photo-1741699427799-3fbb70fce948?auto=format&fit=crop&w=2200&q=75') center 40%/cover no-repeat;transform:scale(1.06);animation:heroZoom 24s ease-out both}
+.hero-veil{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.92) 38%,rgba(255,250,244,.62) 70%,rgba(255,246,238,.45) 100%),linear-gradient(180deg,rgba(255,255,255,0) 70%,#FFFFFF 100%)}
+@keyframes heroZoom{from{transform:scale(1.14)}to{transform:scale(1.04)}}
+@media (max-width:900px){.hero-veil{background:linear-gradient(180deg,rgba(255,255,255,.93) 0%,rgba(255,255,255,.88) 60%,#FFFFFF 100%)}}
 .mbar{display:none}
 .pline{display:block}
 @media (max-width:900px){.nav-links{display:none!important}.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.b2,.b3,.b4{grid-column:span 2}.pline{display:none}}
@@ -134,7 +139,9 @@ Call us</a>
 </header>
 
 <!-- HERO -->
-<section id="top" class="dotgrid" style="position: relative; padding: clamp(48px, 7vw, 96px) 0 clamp(64px, 8vw, 110px)">
+<section id="top" class="hero" style="padding: clamp(48px, 7vw, 96px) 0 clamp(64px, 8vw, 110px)">
+<div class="hero-bg" role="img" aria-label="Students studying in a large university library"></div>
+<div class="hero-veil" aria-hidden="true"></div>
 <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: clamp(40px, 5vw, 72px); align-items: center">
 
 <div>
@@ -451,45 +458,45 @@ Education marketing · Pakistan
 <div class="wrap">
 <div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 52px">
 <div style="max-width: 680px">
-<div class="mono" style="font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #C2410C">— Previous results</div>
+<div class="mono" style="font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #C2410C">— Example outcomes</div>
 <h2 style="margin: 18px 0 0; font-size: clamp(36px, 5vw, 62px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 500">Results, <span class="serif" style="font-style: italic; color: #C2410C">not reports.</span></h2>
 </div>
-<p style="margin: 0; max-width: 360px; font-size: 17px; line-height: 1.6; color: #57504A">Numbers from real campaigns we've run for education clients.</p>
+<p style="margin: 0; max-width: 360px; font-size: 17px; line-height: 1.6; color: #57504A">Illustrative outcomes of the kind our campaigns are built to deliver. Your numbers depend on budget, city and programs, and we forecast them in your free audit.</p>
 </div>
 
 <div class="rv" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); border-top: 1px solid rgba(28,24,20,.12); border-bottom: 1px solid rgba(28,24,20,.12); margin-bottom: 40px">
-<div style="padding: 32px 24px 32px 0"><div class="serif" style="font-size: clamp(52px, 6vw, 76px); line-height: 1; color: #C2410C">+[X]%</div><div style="margin-top: 10px; font-size: 15px; color: #6B6158">more inquiries per intake</div></div>
-<div style="padding: 32px 24px 32px 0"><div class="serif" style="font-size: clamp(52px, 6vw, 76px); line-height: 1; color: #C2410C">−[X]%</div><div style="margin-top: 10px; font-size: 15px; color: #6B6158">lower cost per lead</div></div>
-<div style="padding: 32px 24px 32px 0"><div class="serif" style="font-size: clamp(52px, 6vw, 76px); line-height: 1; color: #C2410C">[X]+</div><div style="margin-top: 10px; font-size: 15px; color: #6B6158">qualified leads delivered</div></div>
-<div style="padding: 32px 24px 32px 0"><div class="serif" style="font-size: clamp(52px, 6vw, 76px); line-height: 1; color: #C2410C">[X]</div><div style="margin-top: 10px; font-size: 15px; color: #6B6158">institutions served</div></div>
+<div style="padding: 32px 24px 32px 0"><div class="serif" style="font-size: clamp(52px, 6vw, 76px); line-height: 1; color: #C2410C">4×</div><div style="margin-top: 10px; font-size: 15px; color: #6B6158">more inquiries per intake</div></div>
+<div style="padding: 32px 24px 32px 0"><div class="serif" style="font-size: clamp(52px, 6vw, 76px); line-height: 1; color: #C2410C">−57%</div><div style="margin-top: 10px; font-size: 15px; color: #6B6158">lower cost per lead</div></div>
+<div style="padding: 32px 24px 32px 0"><div class="serif" style="font-size: clamp(52px, 6vw, 76px); line-height: 1; color: #C2410C">&lt;5 min</div><div style="margin-top: 10px; font-size: 15px; color: #6B6158">first reply on WhatsApp</div></div>
+<div style="padding: 32px 24px 32px 0"><div class="serif" style="font-size: clamp(52px, 6vw, 76px); line-height: 1; color: #C2410C">100%</div><div style="margin-top: 10px; font-size: 15px; color: #6B6158">of inquiries tracked to outcome</div></div>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px">
 <article class="lift rv" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 20px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Study-abroad consultancy</span><span style="font-size: 13px; color: #8A7F75">[City]</span></div>
-<h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25">[Client name]: [one-line headline of the result]</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">[Challenge in one sentence.] We rebuilt their Meta campaigns around the UK intake and added instant WhatsApp follow-up.</p>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Study-abroad consultancy</span><span style="font-size: 13px; color: #8A7F75">Example · Karachi</span></div>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25">From 40 to 160 qualified leads a month for a UK September intake</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">Leads were arriving, but most were not eligible and replies took a day. The plan: Meta campaigns rebuilt around the UK intake, eligibility questions in the form, and instant WhatsApp follow-up.</p>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(28,24,20,.1)">
-<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">[X]%</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">more qualified leads</div></div>
-<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">[X]</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">students enrolled</div></div>
+<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">4×</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">more qualified leads</div></div>
+<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">38</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">students enrolled</div></div>
 </div>
 </article>
 <article class="lift rv" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 20px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Test-prep academy</span><span style="font-size: 13px; color: #8A7F75">[City]</span></div>
-<h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25">[Client name]: [one-line headline of the result]</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">[Challenge in one sentence.] We launched batch-specific landing pages and a lead pipeline for their counsellors.</p>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Test-prep academy</span><span style="font-size: 13px; color: #8A7F75">Example · Lahore</span></div>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25">Cost per lead cut from Rs 1,450 to Rs 620 for MDCAT batches</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">One generic page was serving every course. The plan: batch-specific landing pages, sharper targeting by city and subject, and a lead pipeline for counsellors.</p>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(28,24,20,.1)">
-<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">−[X]%</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">cost per lead</div></div>
-<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">[X]</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">batches filled</div></div>
+<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">−57%</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">cost per lead</div></div>
+<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">6</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">batches filled</div></div>
 </div>
 </article>
 <article class="lift rv" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 20px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Private school</span><span style="font-size: 13px; color: #8A7F75">[City]</span></div>
-<h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25">[Client name]: [one-line headline of the result]</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">[Challenge in one sentence.] We ran an admission-season campaign aimed at parents, with campus-visit booking.</p>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Private school</span><span style="font-size: 13px; color: #8A7F75">Example · Islamabad</span></div>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25">212 campus visits booked in a single admission season</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">Parents were seeing ads but not visiting. The plan: a parent-focused campaign from February to April with online campus-visit booking and WhatsApp reminders.</p>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(28,24,20,.1)">
-<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">[X]</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">campus visits booked</div></div>
-<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">[X]%</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">seats filled</div></div>
+<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">212</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">campus visits booked</div></div>
+<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">94%</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">seats filled</div></div>
 </div>
 </article>
 </div>
