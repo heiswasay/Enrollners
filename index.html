@@ -89,6 +89,11 @@ details[open] .plus{transform:rotate(45deg)}
 .case-img{display:block;width:calc(100% + 60px);height:210px;margin:-30px -30px 4px;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
 .case-wrap{overflow:hidden}
 .case-wrap:hover .case-img{transform:scale(1.05)}
+.calc-row{display:flex;flex-direction:column;gap:10px;padding:14px 0;border-bottom:1px solid rgba(28,24,20,.08)}
+.calc-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.calc-head label{font-size:15px;font-weight:500;color:#1C1814}
+.calc-val{font-family:'Geist Mono',ui-monospace,monospace;font-size:15px;color:#C2410C;font-variant-numeric:tabular-nums}
+.calc-row input[type=range]{width:100%;accent-color:#C2410C;height:28px;cursor:pointer}
 .mbar{display:none}
 .pline{display:block}
 @media (max-width:900px){.nav-links{display:none!important}.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.b2,.b3,.b4{grid-column:span 2}.pline{display:none}}
@@ -125,7 +130,7 @@ section[id]{scroll-margin-top:84px}
 <a href="#services">Services</a>
 <a href="#who">Who we serve</a>
 <a href="#process">Process</a>
-<a href="#results">Results</a>
+<a href="#calculator">Calculator</a>
 <a href="#faq">FAQ</a>
 </nav>
 <div style="display: flex; align-items: center; gap: 10px">
@@ -140,7 +145,7 @@ Call us</a>
 <a href="#services" style="padding: 14px 0; font-size: 22px; color: #1C1814; text-decoration: none; border-bottom: 1px solid rgba(28,24,20,.07)">Services</a>
 <a href="#who" style="padding: 14px 0; font-size: 22px; color: #1C1814; text-decoration: none; border-bottom: 1px solid rgba(28,24,20,.07)">Who we serve</a>
 <a href="#process" style="padding: 14px 0; font-size: 22px; color: #1C1814; text-decoration: none; border-bottom: 1px solid rgba(28,24,20,.07)">Process</a>
-<a href="#results" style="padding: 14px 0; font-size: 22px; color: #1C1814; text-decoration: none; border-bottom: 1px solid rgba(28,24,20,.07)">Results</a>
+<a href="#calculator" style="padding: 14px 0; font-size: 22px; color: #1C1814; text-decoration: none; border-bottom: 1px solid rgba(28,24,20,.07)">Calculator</a>
 <a href="#faq" style="padding: 14px 0; font-size: 22px; color: #1C1814; text-decoration: none; border-bottom: 1px solid rgba(28,24,20,.07)">FAQ</a>
 <a class="btn btn-primary" href="#contact" style="margin-top: 16px; min-height: 54px">Get your free ad audit</a>
 </nav>
@@ -158,17 +163,18 @@ Call us</a>
 Education marketing · Pakistan
 </div>
 <h1 class="load d1" style="margin: 26px 0 0; font-size: clamp(44px, 7vw, 86px); line-height: .98; letter-spacing: -0.045em; font-weight: 500">We turn ad spend into <span class="serif" style="font-style: italic; color: #C2410C; letter-spacing: -0.02em">admissions.</span></h1>
-<p class="load d2" style="margin: 26px 0 0; max-width: 540px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #57504A">Enrollners is a marketing agency built only for schools, colleges, academies and study-abroad consultancies. Ads, landing pages and WhatsApp follow-up, engineered around your intake calendar.</p>
+<p class="load d2" style="margin: 26px 0 0; max-width: 540px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #57504A">Most institutes don't have a lead problem. They have a <strong style="color: #1C1814; font-weight: 600">follow-up problem</strong>. Enrollners runs your ads, landing pages and WhatsApp follow-up as one system, so more of the students who inquire end up enrolled.</p>
 <div class="load d3" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px">
-<a class="btn btn-primary" href="#contact" style="min-height: 56px; padding: 0 28px; font-size: 16px">Get your free ad audit
+<a class="btn btn-primary" href="#contact" style="min-height: 56px; padding: 0 28px; font-size: 16px">Get my free admissions audit
 <svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-<a class="btn btn-ghost" href="#results" style="min-height: 56px; padding: 0 26px; font-size: 16px">See results</a>
+<a class="btn btn-ghost" href="#calculator" style="min-height: 56px; padding: 0 26px; font-size: 16px">How many students am I losing?</a>
 </div>
 <div class="load d4" style="display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 40px; font-size: 14px; color: #6B6158">
 <span style="display: flex; align-items: center; gap: 8px"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #C2410C"><path d="M20 6 9 17l-5-5"></path></svg>Meta &amp; Google Ads</span>
 <span style="display: flex; align-items: center; gap: 8px"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #C2410C"><path d="M20 6 9 17l-5-5"></path></svg>WhatsApp automation</span>
 <span style="display: flex; align-items: center; gap: 8px"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #C2410C"><path d="M20 6 9 17l-5-5"></path></svg>Lead CRM &amp; reporting</span>
 </div>
+<p class="load d4" style="margin: 18px 0 0; font-size: 14px; color: #6B6158">Running Meta, Google and LinkedIn campaigns since 2021. <a href="#contact" style="font-weight: 500">Talk to us on WhatsApp</a></p>
 </div>
 
 <!-- Hero visual: enrollment engine -->
@@ -207,7 +213,7 @@ Education marketing · Pakistan
 </div>
 
 <div class="float2 hide-sm" style="position: absolute; bottom: 4%; right: -3%; width: 230px; padding: 16px; border-radius: 18px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08); box-shadow: 0 24px 50px -28px rgba(28,24,20,.4)">
-<div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 13px; font-weight: 600">Intake funnel</span><span class="mono" style="font-size: 10px; letter-spacing: .1em; color: #8A7F75; text-transform: uppercase">Sample</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 13px; font-weight: 600">Intake funnel</span><span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #16A34A"></span></div>
 <div style="display: flex; flex-direction: column; gap: 9px; margin-top: 12px">
 <div><div style="font-size: 11px; color: #6B6158; margin-bottom: 4px">Inquiries</div><div style="height: 8px; border-radius: 99px; background: #F2A541; width: 100%"></div></div>
 <div><div style="font-size: 11px; color: #6B6158; margin-bottom: 4px">Counselled</div><div style="height: 8px; border-radius: 99px; background: #EA6A2A; width: 68%"></div></div>
@@ -248,7 +254,7 @@ Education marketing · Pakistan
 <div class="rv">
 <div class="mono" style="font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #C2410C">— The problem</div>
 <h2 style="margin: 18px 0 0; font-size: clamp(36px, 5vw, 62px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 500">Most agencies sell likes. You need <span class="serif" style="font-style: italic; color: #C2410C">enrolled students.</span></h2>
-<p style="margin: 22px 0 0; font-size: 18px; line-height: 1.6; color: #57504A; max-width: 460px">Admissions marketing runs on deadlines, parents, counsellors and follow-up. A generic agency doesn't see any of that, so the budget leaks long before a student walks in.</p>
+<p style="margin: 22px 0 0; font-size: 18px; line-height: 1.6; color: #57504A; max-width: 460px">Every inquiry you pay for is a student who raised their hand. When nobody replies for a day, they join the academy or consultancy that replied in five minutes. That's a seat you paid for and handed to a competitor.</p>
 </div>
 <div style="display: flex; flex-direction: column">
 <div class="rv" style="display: flex; gap: 22px; padding: 28px 0; border-top: 1px solid rgba(28,24,20,.1)">
@@ -270,6 +276,33 @@ Education marketing · Pakistan
 <span style="width: 10px; height: 10px; border-radius: 50%; background: #DC2626"></span>Inquiry unanswered for 26 hours</figcaption>
 <span class="float2" style="position: absolute; right: 20px; top: 20px; padding: 10px 14px; border-radius: 14px; background: #1C1814; color: #FFFFFF; font-size: 13px; font-weight: 500; box-shadow: 0 20px 40px -22px rgba(28,24,20,.6)">Seat lost to a competitor</span>
 </figure>
+</div>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calculator" style="padding: clamp(80px, 10vw, 128px) 0; background: #1C1814; color: #FFFFFF; position: relative; overflow: hidden">
+<div class="spin-slow" style="position: absolute; left: -260px; bottom: -260px; width: 620px; height: 620px; border-radius: 50%; border: 1px dashed rgba(247,160,114,.22)"></div>
+<div class="wrap" style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(40px, 6vw, 80px); align-items: center">
+<div class="rv">
+<div class="mono" style="font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #F7A072">— Seat leak calculator</div>
+<h2 style="margin: 18px 0 0; font-size: clamp(36px, 5vw, 60px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 500">How many students are you <span class="serif" style="font-style: italic; color: #F7A072">losing every month?</span></h2>
+<p style="margin: 22px 0 0; font-size: 18px; line-height: 1.6; color: rgba(255,255,255,.72); max-width: 460px">Move the sliders to match your institute. The gap between a fast reply and a slow one is where most admissions budgets disappear.</p>
+<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 28px; font-size: 15px; color: rgba(255,255,255,.8)">
+<span style="display: flex; gap: 10px; align-items: center"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="color: #F7A072"><path d="M20 6 9 17l-5-5"></path></svg>Takes 20 seconds</span>
+<span style="display: flex; gap: 10px; align-items: center"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="color: #F7A072"><path d="M20 6 9 17l-5-5"></path></svg>Nothing is sent or saved</span>
+</div>
+</div>
+<div class="rv" style="border-radius: 30px; background: #FFFFFF; color: #1C1814; padding: clamp(24px, 4vw, 40px); box-shadow: 0 40px 90px -40px rgba(0,0,0,.6)">
+<div class="calc-row"><div class="calc-head"><label for="c-inq">Inquiries per month</label><output id="o-inq" class="calc-val">150</output></div><input id="c-inq" type="range" min="20" max="1000" step="10" value="150"></div>
+<div class="calc-row"><div class="calc-head"><label for="c-fast">Inquiries answered within 1 hour</label><output id="o-fast" class="calc-val">30%</output></div><input id="c-fast" type="range" min="0" max="100" step="5" value="30"></div>
+<div class="calc-row"><div class="calc-head"><label for="c-fee">Average fee per student (Rs)</label><output id="o-fee" class="calc-val">80,000</output></div><input id="c-fee" type="range" min="10000" max="1000000" step="10000" value="80000"></div>
+<div style="margin-top: 26px; padding: 24px; border-radius: 22px; background: #FFF4EC; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<div><div class="serif" id="r-students" style="font-size: clamp(44px, 6vw, 60px); line-height: 1; color: #C2410C">6</div><div style="margin-top: 8px; font-size: 14px; color: #57504A">students lost each month</div></div>
+<div><div class="serif" id="r-fees" style="font-size: clamp(28px, 3.4vw, 40px); line-height: 1.1; color: #1C1814; white-space: nowrap">Rs 4.8 lac</div><div style="margin-top: 8px; font-size: 14px; color: #57504A">in fees walking out the door</div></div>
+</div>
+<a class="btn btn-primary" href="#contact" style="margin-top: 20px; width: 100%; min-height: 56px; font-size: 16px">Plug these leaks — book my free audit</a>
+<p style="margin: 12px 0 0; font-size: 12px; line-height: 1.5; color: #8A7F75">Estimate only. Assumes 8% of inquiries answered within an hour enroll, against 2% of slower ones.</p>
+</div>
 </div>
 </section>
 
@@ -380,7 +413,7 @@ Education marketing · Pakistan
 <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #6B6158">A clear monthly report showing cost per inquiry and cost per enrollment, program by program.</p>
 </div>
 <div>
-<div style="display: flex; justify-content: space-between; font-size: 12px; color: #8A7F75; margin-bottom: 12px"><span>Cost per enrollment</span><span class="mono" style="letter-spacing: .1em; text-transform: uppercase; font-size: 10px">Sample</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 12px; color: #8A7F75; margin-bottom: 12px"><span>Cost per enrollment</span><span>Month by month</span></div>
 <div style="display: flex; align-items: end; gap: 10px; height: 140px; border-bottom: 1px solid rgba(28,24,20,.12)">
 <span class="bar" style="flex: 1; height: 92%; border-radius: 8px 8px 0 0; background: #F6E2D2"></span>
 <span class="bar" style="flex: 1; height: 80%; border-radius: 8px 8px 0 0; background: #F9C9A4"></span>
@@ -483,51 +516,53 @@ Education marketing · Pakistan
 <section id="results" style="padding: clamp(80px, 10vw, 128px) 0">
 <div class="wrap">
 <div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 52px">
-<div style="max-width: 680px">
-<div class="mono" style="font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #C2410C">— Example outcomes</div>
-<h2 style="margin: 18px 0 0; font-size: clamp(36px, 5vw, 62px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 500">Results, <span class="serif" style="font-style: italic; color: #C2410C">not reports.</span></h2>
+<div style="max-width: 700px">
+<div class="mono" style="font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #C2410C">— Sound familiar?</div>
+<h2 style="margin: 18px 0 0; font-size: clamp(36px, 5vw, 62px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 500">The three problems we fix <span class="serif" style="font-style: italic; color: #C2410C">most often.</span></h2>
 </div>
-<p style="margin: 0; max-width: 360px; font-size: 17px; line-height: 1.6; color: #57504A">Illustrative outcomes of the kind our campaigns are built to deliver. Your numbers depend on budget, city and programs, and we forecast them in your free audit.</p>
+<p style="margin: 0; max-width: 360px; font-size: 17px; line-height: 1.6; color: #57504A">If one of these sounds like your institute, the fix is usually faster than you think.</p>
 </div>
-
-<div class="rv" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); border-top: 1px solid rgba(28,24,20,.12); border-bottom: 1px solid rgba(28,24,20,.12); margin-bottom: 40px">
-<div style="padding: 32px 24px 32px 0"><div class="serif" style="font-size: clamp(52px, 6vw, 76px); line-height: 1; color: #C2410C">4×</div><div style="margin-top: 10px; font-size: 15px; color: #6B6158">more inquiries per intake</div></div>
-<div style="padding: 32px 24px 32px 0"><div class="serif" style="font-size: clamp(52px, 6vw, 76px); line-height: 1; color: #C2410C">−57%</div><div style="margin-top: 10px; font-size: 15px; color: #6B6158">lower cost per lead</div></div>
-<div style="padding: 32px 24px 32px 0"><div class="serif" style="font-size: clamp(52px, 6vw, 76px); line-height: 1; color: #C2410C">&lt;5 min</div><div style="margin-top: 10px; font-size: 15px; color: #6B6158">first reply on WhatsApp</div></div>
-<div style="padding: 32px 24px 32px 0"><div class="serif" style="font-size: clamp(52px, 6vw, 76px); line-height: 1; color: #C2410C">100%</div><div style="margin-top: 10px; font-size: 15px; color: #6B6158">of inquiries tracked to outcome</div></div>
-</div>
-
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px">
-<article class="lift rv case-wrap" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 20px">
+<article class="lift rv case-wrap" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 18px">
 <img class="case-img" src="images/consultation.webp" alt="Students and a counsellor reviewing options together on a laptop" loading="lazy" width="820" height="547">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 12px"><span style="white-space: nowrap; font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Study-abroad consultancy</span><span style="white-space: nowrap; font-size: 13px; color: #8A7F75">Example · Karachi</span></div>
-<h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25">From 40 to 160 qualified leads a month for a UK September intake</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">Leads were arriving, but most were not eligible and replies took a day. The plan: Meta campaigns rebuilt around the UK intake, eligibility questions in the form, and instant WhatsApp follow-up.</p>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(28,24,20,.1)">
-<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">4×</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">more qualified leads</div></div>
-<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">38</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">students enrolled</div></div>
+<span style="align-self: flex-start; white-space: nowrap; font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Study-abroad consultancies</span>
+<h3 class="serif" style="margin: 0; font-size: 30px; font-style: italic; font-weight: 400; letter-spacing: -0.01em; line-height: 1.15">“We get leads, but they’re the wrong students.”</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">Broad targeting and a one-line form attract students who can't meet the requirements. Your counsellors spend the day on calls that go nowhere.</p>
+<div style="margin-top: auto; padding-top: 18px; border-top: 1px solid rgba(28,24,20,.1)">
+<div class="mono" style="font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #C2410C; margin-bottom: 12px">How we fix it</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.45"><li style="display: flex; gap: 10px; align-items: flex-start"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex: none; margin-top: 2px; color: #C2410C"><path d="M20 6 9 17l-5-5"></path></svg><span>Targeting by age, education level and budget signals</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex: none; margin-top: 2px; color: #C2410C"><path d="M20 6 9 17l-5-5"></path></svg><span>Eligibility questions built into the form</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex: none; margin-top: 2px; color: #C2410C"><path d="M20 6 9 17l-5-5"></path></svg><span>Hot leads sent to counsellors on WhatsApp instantly</span></li></ul>
 </div>
 </article>
-<article class="lift rv case-wrap" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 20px">
+<article class="lift rv case-wrap" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 18px">
 <img class="case-img" src="images/exam-prep.webp" alt="Students reading textbooks in a sunlit classroom" loading="lazy" width="820" height="547">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 12px"><span style="white-space: nowrap; font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Test-prep academy</span><span style="white-space: nowrap; font-size: 13px; color: #8A7F75">Example · Lahore</span></div>
-<h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25">Cost per lead cut from Rs 1,450 to Rs 620 for MDCAT batches</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">One generic page was serving every course. The plan: batch-specific landing pages, sharper targeting by city and subject, and a lead pipeline for counsellors.</p>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(28,24,20,.1)">
-<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">−57%</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">cost per lead</div></div>
-<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">6</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">batches filled</div></div>
+<span style="align-self: flex-start; white-space: nowrap; font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Coaching &amp; test-prep academies</span>
+<h3 class="serif" style="margin: 0; font-size: 30px; font-style: italic; font-weight: 400; letter-spacing: -0.01em; line-height: 1.15">“Our ads worked for a month, then stopped.”</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">The same creative runs until people stop noticing it, and one generic page tries to sell every course to every student.</p>
+<div style="margin-top: auto; padding-top: 18px; border-top: 1px solid rgba(28,24,20,.1)">
+<div class="mono" style="font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #C2410C; margin-bottom: 12px">How we fix it</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.45"><li style="display: flex; gap: 10px; align-items: flex-start"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex: none; margin-top: 2px; color: #C2410C"><path d="M20 6 9 17l-5-5"></path></svg><span>New creative every week, written for each batch</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex: none; margin-top: 2px; color: #C2410C"><path d="M20 6 9 17l-5-5"></path></svg><span>A landing page per course and per city</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex: none; margin-top: 2px; color: #C2410C"><path d="M20 6 9 17l-5-5"></path></svg><span>Budget moved daily to the ads that bring admissions</span></li></ul>
 </div>
 </article>
-<article class="lift rv case-wrap" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 20px">
+<article class="lift rv case-wrap" style="border-radius: 26px; background: #FBF6F0; border: 1px solid rgba(28,24,20,.06); padding: 30px; display: flex; flex-direction: column; gap: 18px">
 <img class="case-img" src="images/classroom.webp" alt="Teacher presenting to a class of school students" loading="lazy" width="820" height="547">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 12px"><span style="white-space: nowrap; font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Private school</span><span style="white-space: nowrap; font-size: 13px; color: #8A7F75">Example · Islamabad</span></div>
-<h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25">212 campus visits booked in a single admission season</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">Parents were seeing ads but not visiting. The plan: a parent-focused campaign from February to April with online campus-visit booking and WhatsApp reminders.</p>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(28,24,20,.1)">
-<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">212</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">campus visits booked</div></div>
-<div><div class="serif" style="font-size: 38px; line-height: 1; color: #C2410C">94%</div><div style="font-size: 13px; color: #6B6158; margin-top: 6px">seats filled</div></div>
+<span style="align-self: flex-start; white-space: nowrap; font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid rgba(28,24,20,.08)">Private schools</span>
+<h3 class="serif" style="margin: 0; font-size: 30px; font-style: italic; font-weight: 400; letter-spacing: -0.01em; line-height: 1.15">“Parents see our ads but never visit.”</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #6B6158">School ads that talk about facilities don't answer what parents actually worry about, and there's no easy way to book a visit.</p>
+<div style="margin-top: auto; padding-top: 18px; border-top: 1px solid rgba(28,24,20,.1)">
+<div class="mono" style="font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #C2410C; margin-bottom: 12px">How we fix it</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.45"><li style="display: flex; gap: 10px; align-items: flex-start"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex: none; margin-top: 2px; color: #C2410C"><path d="M20 6 9 17l-5-5"></path></svg><span>Parent-focused campaigns from February to April</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex: none; margin-top: 2px; color: #C2410C"><path d="M20 6 9 17l-5-5"></path></svg><span>Online campus-visit booking with WhatsApp reminders</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="flex: none; margin-top: 2px; color: #C2410C"><path d="M20 6 9 17l-5-5"></path></svg><span>Follow-up sequence until the admission form is in</span></li></ul>
 </div>
 </article>
+</div>
+
+<div class="rv" style="margin-top: 56px; border-radius: 28px; background: #FFF4EC; padding: clamp(24px, 4vw, 40px)">
+<div class="mono" style="font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #C2410C">— Our standard on every account</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 24px; margin-top: 24px">
+<div><div class="serif" style="font-size: clamp(46px, 5vw, 64px); line-height: 1; color: #C2410C">&lt;5 min</div><div style="margin-top: 10px; font-size: 15px; color: #57504A">first reply to every new inquiry on WhatsApp</div></div>
+<div><div class="serif" style="font-size: clamp(46px, 5vw, 64px); line-height: 1; color: #C2410C">100%</div><div style="margin-top: 10px; font-size: 15px; color: #57504A">of inquiries tracked from first click to enrollment</div></div>
+<div><div class="serif" style="font-size: clamp(46px, 5vw, 64px); line-height: 1; color: #C2410C">Weekly</div><div style="margin-top: 10px; font-size: 15px; color: #57504A">new creative and budget changes based on admissions</div></div>
+<div><div class="serif" style="font-size: clamp(46px, 5vw, 64px); line-height: 1; color: #C2410C">Monthly</div><div style="margin-top: 10px; font-size: 15px; color: #57504A">report showing your cost per enrolled student</div></div>
+</div>
 </div>
 </div>
 </section>
@@ -676,7 +711,7 @@ Education marketing · Pakistan
 <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@institute.edu.pk"></div>
 <div class="field" style="grid-column: 1 / -1"><label for="f-msg">What are your enrollment goals?</label><textarea id="f-msg" name="message" placeholder="e.g. Fill our UK September intake, or two new MDCAT batches"></textarea></div>
 <div style="grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px">
-<span style="font-size: 13px; color: #8A7F75">We reply on WhatsApp or email.</span>
+<span style="font-size: 13px; color: #8A7F75">Free · No obligation · We reply on WhatsApp</span>
 <button class="btn btn-primary" type="submit" style="min-height: 56px; padding: 0 30px; font-size: 16px">Request my free audit
 <svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
 </div>
@@ -710,7 +745,7 @@ Education marketing · Pakistan
 <span class="mono" style="font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.5)">Explore</span>
 <a href="#services" style="color: rgba(255,255,255,.85); text-decoration: none">Services</a>
 <a href="#who" style="color: rgba(255,255,255,.85); text-decoration: none">Who we serve</a>
-<a href="#results" style="color: rgba(255,255,255,.85); text-decoration: none">Results</a>
+<a href="#calculator" style="color: rgba(255,255,255,.85); text-decoration: none">Calculator</a>
 <a href="#faq" style="color: rgba(255,255,255,.85); text-decoration: none">FAQ</a>
 </div>
 <div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px">
@@ -768,6 +803,20 @@ Education marketing · Pakistan
       menu.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';
     })});
   }
+
+  // Seat leak calculator
+  var ci=document.getElementById('c-inq'), cf=document.getElementById('c-fast'), cfe=document.getElementById('c-fee');
+  function fmtRs(n){ if(n>=10000000) return 'Rs '+(n/10000000).toFixed(1).replace(/\.0$/,'')+' crore'; if(n>=100000) return 'Rs '+(n/100000).toFixed(1).replace(/\.0$/,'')+' lac'; return 'Rs '+Math.round(n).toLocaleString('en-PK'); }
+  function calc(){
+    var inq=+ci.value, fast=+cf.value/100, fee=+cfe.value;
+    var lost=Math.round(inq*(1-fast)*(0.08-0.02));
+    document.getElementById('o-inq').textContent=inq;
+    document.getElementById('o-fast').textContent=cf.value+'%';
+    document.getElementById('o-fee').textContent=fee.toLocaleString('en-PK');
+    document.getElementById('r-students').textContent=lost;
+    document.getElementById('r-fees').textContent=fmtRs(lost*fee);
+  }
+  if(ci){ [ci,cf,cfe].forEach(function(el){el.addEventListener('input',calc)}); calc(); }
 
   // Contact form
   // Paste a Web3Forms access key (https://web3forms.com, free) to receive submissions by email.
