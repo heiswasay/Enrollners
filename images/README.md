@@ -23,3 +23,13 @@ Every photo on the site lives in this folder. To change one, upload a new file *
 ## Credits
 
 The current photos are free stock images from [Unsplash](https://unsplash.com), used under the [Unsplash License](https://unsplash.com/license), which allows free commercial use without attribution.
+
+## Proof screenshots
+
+| File | Where it appears |
+|---|---|
+| `proof-messaging-usd.webp` | Proof section, large card (8,428 conversations at $0.07) |
+| `proof-messaging-pkr.webp` | Proof section, Pakistan card (1,068 conversations at Rs 15) |
+| `proof-leads-gbp.webp` | Proof section, UK card (133 leads at £9.17) |
+
+These are real Meta Ads Manager screenshots. If you swap one, update the numbers written beside it in `index.html` so they match the new screenshot.
