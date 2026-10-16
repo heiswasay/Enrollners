@@ -28,6 +28,7 @@ The current photos are free stock images from [Unsplash](https://unsplash.com), 
 
 | File | Where it appears |
 |---|---|
+| `logo.png` | Header and footer logo (transparent background) |
 | `proof-messaging-usd.webp` | Proof section, large card (8,428 conversations at $0.07) |
 | `proof-messaging-pkr.webp` | Proof section, Pakistan card (1,068 conversations at Rs 15) |
 | `proof-leads-gbp.webp` | Proof section, UK card (133 leads at £9.17) |
