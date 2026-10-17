@@ -34,3 +34,14 @@ The current photos are free stock images from [Unsplash](https://unsplash.com), 
 | `proof-leads-gbp.webp` | Proof section, UK card (133 leads at £9.17) |
 
 These are real Meta Ads Manager screenshots. If you swap one, update the numbers written beside it in `index.html` so they match the new screenshot.
+
+## Service card photos (What we do)
+
+| File | Used in | Unsplash photo |
+|---|---|---|
+| svc-marketing.webp | Marketing card | https://unsplash.com/photos/a-person-holding-a-cell-phone-in-front-of-a-laptop-Aqc7znjxROM |
+| svc-automation.webp | Automation card | https://unsplash.com/photos/person-holding-phone-33oxtOMk6Ac |
+| svc-software.webp | Software card | https://unsplash.com/photos/laptop-computer-on-glass-top-table-hpjSkU2UYSU |
+| svc-media.webp | Photo & video card | https://unsplash.com/photos/man-in-blue-crew-neck-t-shirt-using-black-video-camera-jA7iWRaJruA |
+
+All four are free to use under the Unsplash License. Replace any file with your own photo (900×560, same name) to swap it.
