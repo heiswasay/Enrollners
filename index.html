@@ -859,6 +859,8 @@ Education marketing · Pakistan
 <button class="btn btn-primary" type="submit" style="min-height: 56px; padding: 0 30px; font-size: 16px">Request my free audit
 <svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
 </div>
+<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+<p id="form-error" hidden role="alert" style="grid-column: 1 / -1; margin: 0; padding: 12px 14px; border-radius: 12px; background: #FEF3F2; color: #B42318; font-size: 14px">Sorry, that didn't go through. Please try again, or message us on WhatsApp at <a href="https://wa.me/923411236082" style="color: #B42318; font-weight: 600">+92 341 1236082</a>.</p>
 </form>
 <div id="form-success" hidden>
 <div style="min-height: 420px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 18px">
@@ -977,6 +979,7 @@ Education marketing · Pakistan
   });
   form.addEventListener('submit',function(e){
     e.preventDefault();
+    var fe=document.getElementById('form-error'); if(fe) fe.hidden=true;
     var bad=null;
     form.querySelectorAll('input,select,textarea').forEach(function(i){
       var f=i.closest('.field'); if(!f) return;
@@ -987,12 +990,16 @@ Education marketing · Pakistan
     var submit=form.querySelector('button[type=submit]');
     function done(){ form.hidden=true; ok.hidden=false; ok.scrollIntoView({behavior:'smooth',block:'center'}); }
     if(WEB3FORMS_KEY){
+      if(data.get('botcheck')) return; // spam bot filled the hidden field
       data.append('access_key',WEB3FORMS_KEY);
-      data.append('subject','New audit request — '+(data.get('institution')||'Enrollners website'));
+      data.append('subject','New audit request: '+(data.get('institution')||'Enrollners website'));
+      data.append('from_name','Enrollners website');
+      if(data.get('email')) data.append('replyto',data.get('email'));
       submit.disabled=true; submit.firstChild.textContent='Sending… ';
-      fetch('https://api.web3forms.com/submit',{method:'POST',body:data})
-        .then(function(r){return r.json()}).then(function(){done()})
-        .catch(function(){ alert('Something went wrong. Please message us on WhatsApp at +92 341 1236082.'); })
+      fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:data})
+        .then(function(r){return r.json()})
+        .then(function(res){ if(res && res.success){ done(); } else { throw new Error(res && res.message); } })
+        .catch(function(){ var m=document.getElementById('form-error'); if(m){ m.hidden=false; } })
         .finally(function(){ submit.disabled=false; submit.firstChild.textContent='Request my free audit '; });
     } else {
       var lines=['Name: '+data.get('name'),'Institution: '+data.get('institution'),'Type: '+data.get('type'),'Service: '+data.get('service'),'City: '+data.get('city'),'Phone/WhatsApp: '+data.get('phone'),'Email: '+data.get('email'),'','Goals: '+data.get('message')];
