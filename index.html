@@ -76,8 +76,8 @@ details[open] .plus{transform:rotate(45deg)}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:#4C65A3;box-shadow:0 0 0 4px rgba(76,101,163,.12)}
 .contact-link{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid rgba(20,26,43,.08);color:#141A2B;text-decoration:none;transition:color .3s,padding .3s}
 .contact-link:hover{color:#4C65A3;padding-left:6px}
-.wa-float{position:fixed;right:24px;bottom:24px;z-index:50;width:60px;height:60px;border-radius:50%;background:#141A2B;color:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 18px 40px -14px rgba(20,26,43,.55);transition:transform .35s,background .35s}
-.wa-float:hover{color:#FFFFFF;background:#4C65A3;transform:scale(1.06)}
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:50;width:60px;height:60px;border-radius:50%;background:#16A34A;color:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 18px 40px -14px rgba(20,26,43,.55);transition:transform .35s,background .35s}
+.wa-float:hover{color:#FFFFFF;background:#15803D;transform:scale(1.06)}
 .hero{position:relative;overflow:hidden;isolation:isolate}
 .hero-bg{position:absolute;inset:0;z-index:-2;filter:saturate(.3) brightness(1.04);background:#E3EAF7 url('images/hero.webp') center 40%/cover no-repeat;transform:scale(1.06);animation:heroZoom 24s ease-out both}
 .hero-veil{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.92) 38%,rgba(246,249,255,.62) 70%,rgba(240,245,253,.45) 100%),linear-gradient(180deg,rgba(255,255,255,0) 70%,#FFFFFF 100%)}
@@ -98,7 +98,7 @@ details[open] .plus{transform:rotate(45deg)}
 .proof-main{grid-template-columns:minmax(0,1fr) minmax(0,2fr)}
 @media (max-width:900px){.proof-main{grid-template-columns:minmax(0,1fr)}}
 .grad{background:linear-gradient(180deg,#4C65A3 15%,#7F9FD3 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding-right:.06em}
-.mbar{display:none}
+.mbar{display:none}.mbar.away{transform:translateY(140%);opacity:0;pointer-events:none}.mbar{transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .35s}
 .pline{display:block}
 @media (max-width:900px){.nav-links{display:none!important}.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.b2,.b3,.b4{grid-column:span 2}.pline{display:none}}
 @media (max-width:760px){.photo-card{min-height:360px}.mbar{display:flex}.wa-float{display:none}.hide-sm{display:none!important}.page{padding-bottom:84px}.nav-cta{display:none!important}}
@@ -110,6 +110,48 @@ details[open] .plus{transform:rotate(45deg)}
 .field.invalid input,.field.invalid select{border-color:#B42318;box-shadow:0 0 0 4px rgba(180,35,24,.1)}
 .field.invalid .err{display:block}
 .btn[disabled]{opacity:.7;cursor:wait}
+/* CRO: hero proof, multi-step form, next steps */
+.hero-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:22px;max-width:560px;border-radius:20px;background:rgba(255,255,255,.82);border:1px solid rgba(20,26,43,.08);box-shadow:0 24px 50px -34px rgba(20,26,43,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);overflow:hidden}
+.hero-proof .hp-head{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid rgba(20,26,43,.07);font-size:12px;color:#5E6577}
+.hero-proof .hp-head a{font-weight:500;white-space:nowrap}
+.hero-proof .hp{padding:14px 18px 16px;border-right:1px solid rgba(20,26,43,.07)}
+.hero-proof .hp:last-child{border-right:0}
+.hero-proof .hp b{display:block;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(28px,3vw,34px);line-height:1;color:#141A2B;font-variant-numeric:tabular-nums}
+.hero-proof .hp span{display:block;margin-top:6px;font-size:12.5px;line-height:1.35;color:#5E6577}
+.hero-risk{display:flex;flex-wrap:wrap;gap:8px 20px;margin:20px 0 0;padding:0;list-style:none;font-size:14px;color:#4B5264}
+.hero-risk li{display:flex;align-items:center;gap:7px}
+.btn-wa .dot{width:10px;height:10px;border-radius:50%;background:#16A34A;box-shadow:0 0 0 4px rgba(22,163,74,.15)}
+.ms-head h3{margin:0;font-size:24px;font-weight:600;letter-spacing:-.02em}
+.ms-count{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#7C8295;white-space:nowrap}
+.ms-bar{height:6px;border-radius:3px;background:#E3EAF7;overflow:hidden;margin-top:16px}
+.ms-bar i{display:block;height:100%;width:33.4%;border-radius:3px;background:linear-gradient(90deg,#738ABC,#4C65A3);transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.ms-step{border:0;margin:26px 0 0;padding:0;min-width:0}
+.ms-step legend{padding:0;margin-bottom:16px;font-size:19px;font-weight:600;letter-spacing:-.01em;color:#141A2B}
+.ms-opts{display:grid;gap:10px}
+.opt{position:relative;display:flex;align-items:center;gap:14px;padding:13px 16px;border:1px solid rgba(20,26,43,.12);border-radius:16px;background:#FFFFFF;cursor:pointer;transition:border-color .25s,background .25s,box-shadow .25s}
+.opt:hover{border-color:#4C65A3;background:#F7F9FD}
+.opt input,.chip input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.opt:has(input:checked){border-color:#4C65A3;background:#EEF2F9;box-shadow:0 0 0 3px rgba(76,101,163,.15)}
+.opt:has(input:focus-visible),.chip:has(input:focus-visible){outline:2px solid #4C65A3;outline-offset:2px}
+.opt-ic{flex:none;width:44px;height:44px;border-radius:12px;background:#E3EAF7;color:#34497E;display:flex;align-items:center;justify-content:center}
+.opt b{display:block;font-size:16px;font-weight:600;color:#141A2B}
+.opt small{display:block;margin-top:2px;font-size:13px;color:#7C8295}
+.opt .arr{margin-left:auto;color:#AFC0E4;flex:none}
+.ms-chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative;display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border:1px solid rgba(20,26,43,.14);border-radius:999px;background:#FFFFFF;font-size:15px;font-weight:500;color:#141A2B;cursor:pointer;transition:border-color .25s,background .25s,color .25s}
+.chip:hover{border-color:#4C65A3}
+.chip:has(input:checked){background:#141A2B;border-color:#141A2B;color:#FFFFFF}
+.ms-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:14px}
+.ms-back{display:inline-flex;align-items:center;gap:6px;margin-top:18px;padding:8px 0;border:0;background:none;font:inherit;font-size:14px;color:#5E6577;cursor:pointer}
+.ms-back:hover{color:#141A2B}
+.ms-note{margin:10px 0 0;font-size:12.5px;color:#7C8295}
+.next-steps{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:18px;max-width:460px}
+.next-steps li{display:flex;gap:16px;align-items:flex-start}
+.next-steps .n{flex:none;width:36px;height:36px;border-radius:50%;background:#141A2B;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600}
+.next-steps b{display:block;font-size:17px;font-weight:600;color:#141A2B}
+.next-steps p{margin:4px 0 0;font-size:15px;line-height:1.55;color:#5E6577}
+@media (max-width:760px){.hero-proof .hp{padding:12px 12px 14px}.hero-proof .hp span{font-size:11.5px}.hero-proof .hp-head{padding:10px 12px}.mbar .btn-wa-m{flex:0 0 auto;padding:0 18px}}
+
 .menu-btn{display:none;width:44px;height:44px;border-radius:12px;border:1px solid rgba(20,26,43,.14);background:#fff;align-items:center;justify-content:center;cursor:pointer;color:#141A2B}
 .mobile-menu{display:none}
 @media (max-width:900px){.menu-btn{display:inline-flex}.mobile-menu.open{display:flex}}
@@ -170,7 +212,7 @@ section[id]{scroll-margin-top:84px}
 <a class="btn btn-ghost nav-cta" href="tel:+923411236082" style="min-height: 44px; padding: 0 18px; font-size: 14px">
 <svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
 Call us</a>
-<a class="btn btn-primary nav-audit" href="#contact" style="min-height: 44px; padding: 0 20px; font-size: 14px; white-space: nowrap">Free ad audit</a>
+<a class="btn btn-primary nav-audit" href="#contact" style="min-height: 44px; padding: 0 20px; font-size: 14px; white-space: nowrap">Free audit</a>
 <button class="menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
 </div>
 </div>
@@ -186,7 +228,7 @@ Call us</a>
 </header>
 
 <!-- HERO -->
-<section id="top" class="hero" style="padding: clamp(48px, 7vw, 96px) 0 clamp(64px, 8vw, 110px)">
+<section id="top" class="hero" style="padding: clamp(36px, 5vw, 64px) 0 clamp(64px, 8vw, 110px)">
 <div class="hero-bg" role="img" aria-label="Students studying in a large university library"></div>
 <div class="hero-veil" aria-hidden="true"></div>
 <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: clamp(40px, 5vw, 72px); align-items: center">
@@ -196,20 +238,24 @@ Call us</a>
 <span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #738ABC"></span>
 <span data-l10n="hero-badge">Education marketing · Pakistan</span>
 </div>
-<h1 class="load d1" style="margin: 26px 0 0; font-size: clamp(44px, 7vw, 86px); line-height: .98; letter-spacing: -0.045em; font-weight: 500">We turn ad spend into <span class="serif grad" style="font-style: italic; color: #4C65A3; letter-spacing: -0.02em">admissions.</span></h1>
-<p class="load d2" style="margin: 26px 0 0; max-width: 540px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #4B5264">Most institutes don't have a lead problem. They have a <strong style="color: #141A2B; font-weight: 600">follow-up problem</strong>. Enrollners runs your marketing, automates your follow-up, builds your software and shoots your photos and videos, as one team, so more of the students who inquire end up enrolled.</p>
-<div class="load d3 hero-ctas" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px">
-<a class="btn btn-primary" href="#contact" style="min-height: 56px; padding: 0 28px; font-size: 16px">Get my free admissions audit
+<h1 class="load d1" style="margin: 22px 0 0; font-size: clamp(44px, 6.4vw, 80px); line-height: .98; letter-spacing: -0.045em; font-weight: 500">We turn ad spend into <span class="serif grad" style="font-style: italic; color: #4C65A3; letter-spacing: -0.02em">admissions.</span></h1>
+<p class="load d2" style="margin: 20px 0 0; max-width: 530px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #4B5264">Ads that reach the right students, instant WhatsApp follow-up, and one monthly number that matters: what each <strong style="color: #141A2B; font-weight: 600">enrolled student</strong> cost you. One team for schools, coaching centres, colleges and training institutes.</p>
+<div class="load d3 hero-ctas" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px">
+<a class="btn btn-primary" href="#contact" style="min-height: 58px; padding: 0 30px; font-size: 16px">Get my free admissions audit
 <svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-<a class="btn btn-ghost" href="#calculator" style="min-height: 56px; padding: 0 26px; font-size: 16px">How many students am I losing?</a>
+<a class="btn btn-ghost btn-wa" href="https://wa.me/923411236082?text=Hi%20Enrollners%2C%20I%27d%20like%20a%20free%20admissions%20audit%20for%20my%20institution." target="_blank" rel="noopener" style="min-height: 58px; padding: 0 24px; font-size: 16px"><span class="dot" aria-hidden="true"></span>Chat on WhatsApp</a>
 </div>
-<div class="load d4" style="display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 40px; font-size: 14px; color: #5E6577">
-<span style="display: flex; align-items: center; gap: 8px"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #4C65A3"><path d="M20 6 9 17l-5-5"></path></svg>Marketing</span>
-<span style="display: flex; align-items: center; gap: 8px"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #4C65A3"><path d="M20 6 9 17l-5-5"></path></svg>Automation</span>
-<span style="display: flex; align-items: center; gap: 8px"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #4C65A3"><path d="M20 6 9 17l-5-5"></path></svg>Software</span>
-<span style="display: flex; align-items: center; gap: 8px"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #4C65A3"><path d="M20 6 9 17l-5-5"></path></svg>Photo &amp; video</span>
+<ul class="load d4 hero-risk">
+<li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #16A34A"><path d="M20 6 9 17l-5-5"></path></svg>Free, no obligation</li>
+<li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #16A34A"><path d="M20 6 9 17l-5-5"></path></svg>20-minute review</li>
+<li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #16A34A"><path d="M20 6 9 17l-5-5"></path></svg>3 fixes you keep, even if you don't hire us</li>
+</ul>
+<div class="load d4 hero-proof" aria-label="Results from one of our campaigns">
+<div class="hp-head"><span>Real campaign · Meta Ads Manager</span><a href="#proof">See the dashboards →</a></div>
+<div class="hp"><b>8,428</b><span>student chats started</span></div>
+<div class="hp"><b data-l10n="stat-cost">Rs 20</b><span>cost per chat</span></div>
+<div class="hp"><b>68%</b><span>below similar advertisers</span></div>
 </div>
-<p class="load d4" data-l10n="hero-proof" style="margin: 18px 0 0; font-size: 14px; color: #5E6577">8,428 student conversations at about Rs 20 each in one campaign. <a href="#proof" style="font-weight: 500">See the dashboards</a></p>
 </div>
 
 <!-- Hero visual: enrollment engine -->
@@ -774,6 +820,10 @@ Call us</a>
 </div>
 <div class="rv" style="display: flex; flex-direction: column; border-top: 1px solid rgba(20,26,43,.12)">
 <details style="border-bottom: 1px solid rgba(20,26,43,.12)">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; font-size: 19px; font-weight: 500; letter-spacing: -0.01em">What's included in the free audit?<span class="plus" style="flex: none; width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(20,26,43,.15); display: flex; align-items: center; justify-content: center; color: #4C65A3"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 48px 24px 0; font-size: 16px; line-height: 1.65; color: #5E6577">A 20-minute review of the ads you're running now, your landing page and how fast inquiries get a reply, plus a look at what competing institutions in your city are running. You get three fixes you can apply this week, whether or not you hire us.</p>
+</details>
+<details style="border-bottom: 1px solid rgba(20,26,43,.12)">
 <summary style="display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; font-size: 19px; font-weight: 500; letter-spacing: -0.01em">Do you only work with educational institutes?<span class="plus" style="flex: none; width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(20,26,43,.15); display: flex; align-items: center; justify-content: center; color: #4C65A3"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
 <p style="margin: 0; padding: 0 48px 24px 0; font-size: 16px; line-height: 1.65; color: #5E6577">Yes. Private schools, coaching centres, private colleges, and training institutes such as English language, IT and short-course institutes. That focus is the reason our marketing, automation and software work so well.</p>
 </details>
@@ -792,6 +842,7 @@ Call us</a>
 <details style="border-bottom: 1px solid rgba(20,26,43,.12)">
 <summary style="display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; font-size: 19px; font-weight: 500; letter-spacing: -0.01em">Do you handle WhatsApp follow-up too?<span class="plus" style="flex: none; width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(20,26,43,.15); display: flex; align-items: center; justify-content: center; color: #4C65A3"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
 <p style="margin: 0; padding: 0 48px 24px 0; font-size: 16px; line-height: 1.65; color: #5E6577">Yes. We set up instant replies, reminders and a pipeline your counsellors can work from, so no inquiry is left waiting.</p>
+</details>
 <details style="border-bottom: 1px solid rgba(20,26,43,.12)">
 <summary style="display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; font-size: 19px; font-weight: 500; letter-spacing: -0.01em">Can you build software or shoot videos for us too?<span class="plus" style="flex: none; width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(20,26,43,.15); display: flex; align-items: center; justify-content: center; color: #4C65A3"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
 <p style="margin: 0; padding: 0 48px 24px 0; font-size: 16px; line-height: 1.65; color: #5E6577">Yes. Besides marketing we build custom CRMs, student and fee management and accounting systems, set up automations, and handle photography and videography. You can hire us for one service or all of them.</p>
@@ -806,13 +857,19 @@ Call us</a>
 <div class="rv">
 <div class="mono" style="font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #4C65A3">— Contact</div>
 <h2 style="margin: 18px 0 0; font-size: clamp(38px, 5.4vw, 68px); line-height: 1; letter-spacing: -0.045em; font-weight: 500">Let's fill your <span class="serif grad" style="font-style: italic; color: #4C65A3">next intake.</span></h2>
-<p style="margin: 22px 0 0; font-size: 18px; line-height: 1.6; color: #4B5264; max-width: 440px">Tell us about your institution and we'll come back with your free audit and a plan for the next admission season.</p>
-<div style="margin-top: 36px; border-top: 1px solid rgba(20,26,43,.08)">
+<p style="margin: 22px 0 0; font-size: 18px; line-height: 1.6; color: #4B5264; max-width: 440px">Answer three quick questions and we'll come back with your free audit and a plan for the next admission season.</p>
+<ol class="next-steps" aria-label="What happens next">
+<li><span class="n">1</span><div><b>Tell us about your institution</b><p>Three questions. Under a minute.</p></div></li>
+<li><span class="n">2</span><div><b>We review your ads and follow-up</b><p>Your ads, your page, how fast inquiries get a reply, and what competitors in your city are running.</p></div></li>
+<li><span class="n">3</span><div><b>You get 3 fixes on WhatsApp</b><p>Use them this week, whether or not you hire us.</p></div></li>
+</ol>
+<p style="margin: 40px 0 0; font-size: 14px; color: #7C8295">Prefer to talk now?</p>
+<div style="margin-top: 12px; border-top: 1px solid rgba(20,26,43,.08)">
 <a class="contact-link" href="tel:+923411236082">
 <span style="flex: none; width: 48px; height: 48px; border-radius: 14px; background: #FFFFFF; border: 1px solid rgba(20,26,43,.08); display: flex; align-items: center; justify-content: center; color: #4C65A3"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></span>
 <span><span style="display: block; font-size: 13px; color: #7C8295">Call us</span><span style="display: block; font-size: 19px; font-weight: 500">+92 341 1236082</span></span>
 </a>
-<a class="contact-link" href="https://wa.me/923411236082?text=Hi%20Enrollners%2C%20I%27d%20like%20a%20free%20ad%20audit%20for%20my%20institution.">
+<a class="contact-link" href="https://wa.me/923411236082?text=Hi%20Enrollners%2C%20I%27d%20like%20a%20free%20admissions%20audit%20for%20my%20institution.">
 <span style="flex: none; width: 48px; height: 48px; border-radius: 14px; background: #FFFFFF; border: 1px solid rgba(20,26,43,.08); display: flex; align-items: center; justify-content: center; color: #4C65A3"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.8 7L3 21l2-6A8 8 0 1 1 21 12z"></path></svg></span>
 <span><span style="display: block; font-size: 13px; color: #7C8295">WhatsApp</span><span style="display: block; font-size: 19px; font-weight: 500">+92 341 1236082</span></span>
 </a>
@@ -825,52 +882,52 @@ Call us</a>
 
 <div class="rv" style="border-radius: 30px; background: #FFFFFF; border: 1px solid rgba(20,26,43,.07); box-shadow: 0 40px 80px -50px rgba(30,45,90,.35); padding: clamp(24px, 4vw, 44px)">
 
-<form id="audit-form" novalidate style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 18px">
-<div style="grid-column: 1 / -1">
-<h3 style="margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -0.02em">Request your free audit</h3>
-<p style="margin: 8px 0 0; font-size: 15px; color: #5E6577">Takes under a minute.</p>
+<form id="audit-form" novalidate>
+<div class="ms-head">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3>Get your free audit</h3><span class="mono ms-count" id="ms-count">Step 1 of 3</span></div>
+<div class="ms-bar" aria-hidden="true"><i id="ms-fill"></i></div>
 </div>
-<div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" type="text" required autocomplete="name" placeholder="Ayesha Khan"></div>
+<fieldset class="ms-step" data-step="1">
+<legend>What kind of institution do you run?</legend>
+<div class="ms-opts">
+<label class="opt"><input type="radio" name="type" value="Private school"><span class="opt-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 5l9 5-9 5z"></path><path d="M7 12.5V17c3 2 7 2 10 0v-4.5"></path></svg></span><span><b>Private school</b><small data-l10n="tag-school">Montessori to O/A levels</small></span><svg class="ic arr" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></label>
+<label class="opt"><input type="radio" name="type" value="Coaching centre"><span class="opt-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3z"></path><path d="M8 9h6M8 13h4"></path></svg></span><span><b>Coaching centre</b><small data-l10n="tag-coaching">MDCAT · ECAT · CSS · Matric</small></span><svg class="ic arr" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></label>
+<label class="opt"><input type="radio" name="type" value="Private college"><span class="opt-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21v-6h6v6M2 10l10-6 10 6"></path></svg></span><span><b>Private college</b><small data-l10n="tag-college">FSc · ICS · I.Com · degree</small></span><svg class="ic arr" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></label>
+<label class="opt"><input type="radio" name="type" value="Training institute"><span class="opt-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg></span><span><b>Training institute</b><small data-l10n="tag-training">English · IT · short courses</small></span><svg class="ic arr" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></label>
+<label class="opt"><input type="radio" name="type" value="Other"><span class="opt-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M8.5 12h7M12 8.5v7"></path></svg></span><span><b>Something else</b><small data-l10n="opt-other">Tell us in the next steps</small></span><svg class="ic arr" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></label>
+</div>
+</fieldset>
+<fieldset class="ms-step" data-step="2" hidden>
+<legend>What's the biggest problem right now?</legend>
+<div class="ms-chips"><label class="chip"><input type="radio" name="challenge" value="Not enough inquiries">Not enough inquiries</label><label class="chip"><input type="radio" name="challenge" value="Inquiries, but few admissions">Inquiries, but few admissions</label><label class="chip"><input type="radio" name="challenge" value="Slow replies and follow-up">Slow replies and follow-up</label><label class="chip"><input type="radio" name="challenge" value="We need software or a CRM">We need software or a CRM</label><label class="chip"><input type="radio" name="challenge" value="We need photos and videos">We need photos and videos</label><label class="chip"><input type="radio" name="challenge" value="Not sure yet">Not sure yet</label></div>
+<button class="ms-back" type="button" data-back>← Back</button>
+</fieldset>
+<fieldset class="ms-step" data-step="3" hidden>
+<legend>Where should we send your audit?</legend>
+<div class="ms-grid">
+<div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" required autocomplete="name" placeholder="Ayesha Khan"></div>
 <div class="field"><label for="f-inst">Institution name</label><input id="f-inst" name="institution" type="text" required autocomplete="organization" placeholder="Bright Future Academy"></div>
-<div class="field"><label for="f-type">Institution type</label>
-<select id="f-type" name="type" required>
-<option value="">Select one</option>
-<option>Private school</option>
-<option>Coaching centre</option>
-<option>Private college</option>
-<option>Training institute (English, IT, short courses)</option>
-<option>Other</option>
-</select></div>
-<div class="field"><label for="f-service">Service needed</label>
-<select id="f-service" name="service">
-<option value="">Select one</option>
-<option>Marketing</option>
-<option>Automation</option>
-<option>Software solution</option>
-<option>Photography &amp; videography</option>
-<option>Not sure yet</option>
-</select></div>
-<div class="field"><label for="f-city">City</label><input id="f-city" name="city" type="text" autocomplete="address-level2" placeholder="Karachi"></div>
-<div class="field"><label for="f-phone">Phone / WhatsApp</label><input id="f-phone" name="phone" type="tel" required autocomplete="tel" placeholder="03XX XXXXXXX"></div>
-<div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@institute.edu.pk"></div>
-<div class="field" style="grid-column: 1 / -1"><label for="f-msg">What are your enrollment goals?</label><textarea id="f-msg" name="message" placeholder="e.g. 150 admissions for the new session, or two full IT short-course batches"></textarea></div>
-<div style="grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px">
-<span style="font-size: 13px; color: #7C8295">Free · No obligation · We reply on WhatsApp</span>
-<button class="btn btn-primary" type="submit" style="min-height: 56px; padding: 0 30px; font-size: 16px">Request my free audit
-<svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+<div class="field"><label for="f-phone">WhatsApp number</label><input id="f-phone" name="phone" type="tel" required autocomplete="tel" placeholder="03XX XXXXXXX"></div>
+<div class="field"><label for="f-email">Email <span style="font-weight: 400; color: #9AA1B4">(optional)</span></label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@institute.edu.pk"></div>
 </div>
+<button class="btn btn-primary" type="submit" style="width: 100%; min-height: 58px; margin-top: 20px; font-size: 16px"><span>Get my free audit</span>
+<svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+<p class="ms-note" style="text-align: center">Free · No obligation · We reply on WhatsApp. We only use your details to send your audit.</p>
+<button class="ms-back" type="button" data-back>← Back</button>
+</fieldset>
 <input type="hidden" name="visitor_region" id="f-region" value="Pakistan">
 <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
-<p id="form-error" hidden role="alert" style="grid-column: 1 / -1; margin: 0; padding: 12px 14px; border-radius: 12px; background: #FEF3F2; color: #B42318; font-size: 14px">Sorry, that didn't go through. Please try again, or message us on WhatsApp at <a href="https://wa.me/923411236082" style="color: #B42318; font-weight: 600">+92 341 1236082</a>.</p>
+<p id="form-error" hidden role="alert" style="margin: 16px 0 0; padding: 12px 14px; border-radius: 12px; background: #FEF3F2; color: #B42318; font-size: 14px">Sorry, that didn't go through. Please try again, or message us on WhatsApp at <a href="https://wa.me/923411236082" style="color: #B42318; font-weight: 600">+92 341 1236082</a>.</p>
 </form>
 <div id="form-success" hidden>
 <div style="min-height: 420px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 18px">
 <span style="position: relative; width: 84px; height: 84px; border-radius: 50%; background: #4C65A3; color: #FFFFFF; display: flex; align-items: center; justify-content: center">
 <span class="ripple" style="position: absolute; inset: 0; border-radius: 50%; border: 1px solid #4C65A3"></span>
 <svg class="ic" width="36" height="36" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span>
-<h3 class="serif" style="margin: 8px 0 0; font-size: 42px; font-style: italic; font-weight: 400; letter-spacing: -0.01em">Thank you.</h3>
-<p style="margin: 0; max-width: 340px; font-size: 16px; line-height: 1.6; color: #5E6577">We've received your request and will be in touch shortly to schedule your free audit.</p>
-<button class="btn btn-ghost" type="button" id="form-reset" style="margin-top: 8px">Send another request</button>
+<h3 class="serif" id="ok-title" style="margin: 8px 0 0; font-size: 42px; font-style: italic; font-weight: 400; letter-spacing: -0.01em">Thank you.</h3>
+<p id="ok-text" style="margin: 0; max-width: 360px; font-size: 16px; line-height: 1.6; color: #5E6577">We've received your request and will message you on WhatsApp to set up your free audit.</p>
+<a class="btn btn-primary" id="ok-wa" href="#" target="_blank" rel="noopener" hidden style="margin-top: 4px"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.8 7L3 21l2-6A8 8 0 1 1 21 12z"></path></svg>Open WhatsApp</a>
+<button class="btn btn-ghost" type="button" id="form-reset" style="margin-top: 4px">Start again</button>
 </div>
 </div>
 </div>
@@ -909,16 +966,14 @@ Call us</a>
 </footer>
 
 <!-- Floating WhatsApp (desktop) -->
-<a class="wa-float" href="https://wa.me/923411236082?text=Hi%20Enrollners%2C%20I%27d%20like%20a%20free%20ad%20audit%20for%20my%20institution." aria-label="Chat with Enrollners on WhatsApp">
+<a class="wa-float" href="https://wa.me/923411236082?text=Hi%20Enrollners%2C%20I%27d%20like%20a%20free%20admissions%20audit%20for%20my%20institution." aria-label="Chat with Enrollners on WhatsApp">
 <svg class="ic" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.8 7L3 21l2-6A8 8 0 1 1 21 12z"></path><path d="M9 10.5c.5 1.5 1.8 3 3.5 3.5"></path></svg>
 </a>
 
 <!-- Mobile sticky bar -->
 <div class="mbar" style="position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 50; gap: 8px; padding: 8px; border-radius: 20px; background: rgba(20,26,43,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 18px 40px -16px rgba(20,26,43,.6)">
-<a class="btn" href="tel:+923411236082" style="flex: 1; min-height: 50px; background: rgba(255,255,255,.12); color: #FFFFFF; font-size: 15px">
-<svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>Call</a>
-<a class="btn btn-primary" href="https://wa.me/923411236082?text=Hi%20Enrollners%2C%20I%27d%20like%20a%20free%20ad%20audit%20for%20my%20institution." style="flex: 1; min-height: 50px; font-size: 15px">
-<svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.8 7L3 21l2-6A8 8 0 1 1 21 12z"></path></svg>WhatsApp</a>
+<a class="btn btn-primary" href="#contact" style="flex: 1; min-height: 50px; font-size: 15px">Get my free audit</a>
+<a class="btn btn-wa-m" href="https://wa.me/923411236082?text=Hi%20Enrollners%2C%20I%27d%20like%20a%20free%20admissions%20audit%20for%20my%20institution." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" style="min-height: 50px; background: #16A34A; color: #FFFFFF; font-size: 15px"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.8 7L3 21l2-6A8 8 0 1 1 21 12z"></path></svg>WhatsApp</a>
 </div>
 
 </div>
@@ -977,6 +1032,15 @@ Call us</a>
   var WEB3FORMS_KEY = '';
   var form=document.getElementById('audit-form'), ok=document.getElementById('form-success'), reset=document.getElementById('form-reset');
   if(!form) return;
+  var steps=[].slice.call(form.querySelectorAll('.ms-step')), cur=1;
+  var fill=document.getElementById('ms-fill'), count=document.getElementById('ms-count');
+  function go(n){ cur=n; steps.forEach(function(st){ st.hidden=(+st.getAttribute('data-step')!==n); });
+    if(fill) fill.style.width=(n/3*100)+'%'; if(count) count.textContent='Step '+n+' of 3';
+    var first=steps[n-1].querySelector('input:not([type=radio])'); if(first && n===3) setTimeout(function(){ try{ first.focus({preventScroll:true}); }catch(e){} },60); }
+  form.addEventListener('change',function(e){ var t=e.target;
+    if(t.name==='type' && cur===1) setTimeout(function(){ go(2); },220);
+    if(t.name==='challenge' && cur===2) setTimeout(function(){ go(3); },220); });
+  form.querySelectorAll('[data-back]').forEach(function(b){ b.addEventListener('click',function(){ go(Math.max(1,cur-1)); }); });
   form.querySelectorAll('.field').forEach(function(f){
     var input=f.querySelector('input,select,textarea');
     if(input && input.required){
@@ -988,37 +1052,50 @@ Call us</a>
       input.addEventListener('input',function(){ if(input.checkValidity()) f.classList.remove('invalid'); });
     }
   });
+  function waNumber(){ return (window.ENR&&window.ENR.wa)||'923411236082'; }
   form.addEventListener('submit',function(e){
     e.preventDefault();
+    if(cur!==3){ go(cur+1); return; }
     var fe=document.getElementById('form-error'); if(fe) fe.hidden=true;
     var bad=null;
-    form.querySelectorAll('input,select,textarea').forEach(function(i){
+    steps[2].querySelectorAll('input').forEach(function(i){
       var f=i.closest('.field'); if(!f) return;
       if(!i.checkValidity()){ f.classList.add('invalid'); if(!bad) bad=i; } else f.classList.remove('invalid');
     });
     if(bad){ bad.focus(); return; }
     var data=new FormData(form);
-    var submit=form.querySelector('button[type=submit]');
+    if(data.get('botcheck')) return; // spam bot filled the hidden field
+    var submit=form.querySelector('button[type=submit]'), label=submit.querySelector('span');
+    var okTitle=document.getElementById('ok-title'), okText=document.getElementById('ok-text'), okWa=document.getElementById('ok-wa');
     function done(){ form.hidden=true; ok.hidden=false; ok.scrollIntoView({behavior:'smooth',block:'center'}); }
+    var msg=["Hi Enrollners, I'd like a free admissions audit.",'',
+      'Name: '+data.get('name'),'Institution: '+data.get('institution'),'Type: '+(data.get('type')||'-'),
+      'Biggest problem: '+(data.get('challenge')||'-'),'WhatsApp: '+data.get('phone')].concat(data.get('email')?['Email: '+data.get('email')]:[]).join('\n');
+    var waUrl='https://wa.me/'+waNumber()+'?text='+encodeURIComponent(msg);
     if(WEB3FORMS_KEY){
-      if(data.get('botcheck')) return; // spam bot filled the hidden field
       data.append('access_key',WEB3FORMS_KEY);
       data.append('subject','New audit request: '+(data.get('institution')||'Enrollners website'));
       data.append('from_name','Enrollners website');
       if(data.get('email')) data.append('replyto',data.get('email'));
-      submit.disabled=true; submit.firstChild.textContent='Sending… ';
+      submit.disabled=true; label.textContent='Sending…';
       fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:data})
         .then(function(r){return r.json()})
         .then(function(res){ if(res && res.success){ done(); } else { throw new Error(res && res.message); } })
         .catch(function(){ var m=document.getElementById('form-error'); if(m){ m.hidden=false; } })
-        .finally(function(){ submit.disabled=false; submit.firstChild.textContent='Request my free audit '; });
+        .finally(function(){ submit.disabled=false; label.textContent='Get my free audit'; });
     } else {
-      var lines=['Name: '+data.get('name'),'Institution: '+data.get('institution'),'Type: '+data.get('type'),'Service: '+data.get('service'),'City: '+data.get('city'),'Phone/WhatsApp: '+data.get('phone'),'Email: '+data.get('email'),'','Goals: '+data.get('message')];
-      window.location.href='mailto:contact@enrollners.com?subject='+encodeURIComponent('Free audit request — '+data.get('institution'))+'&body='+encodeURIComponent(lines.join('\n'));
+      // No email inbox connected yet: hand the request over to WhatsApp with everything pre-filled.
+      var w=null; try{ w=window.open(waUrl,'_blank'); if(w){ try{ w.opener=null; }catch(e2){} } }catch(err){}
+      if(okTitle) okTitle.textContent='Almost done.';
+      if(okText) okText.textContent='WhatsApp has opened with your details filled in. Press send, and we’ll reply with a time for your free audit.';
+      if(okWa){ okWa.href=waUrl; okWa.hidden=false; }
       done();
+      if(!w){ window.location.href=waUrl; }
     }
   });
-  if(reset) reset.addEventListener('click',function(){ form.reset(); ok.hidden=true; form.hidden=false; });
+  var mbar=document.querySelector('.mbar'), contact=document.getElementById('contact');
+  if(mbar && contact && 'IntersectionObserver' in window){ new IntersectionObserver(function(en){ mbar.classList.toggle('away', en[0].isIntersecting); },{rootMargin:'0px 0px -20% 0px'}).observe(contact); }
+  if(reset) reset.addEventListener('click',function(){ form.reset(); go(1); ok.hidden=true; form.hidden=false; var w=document.getElementById('ok-wa'); if(w) w.hidden=true; });
 })();
 </script>
 <script>
@@ -1055,7 +1132,7 @@ Call us</a>
       'hero-proof':'8,428 student conversations at about $0.07 each in one campaign.'+see,
       'marquee':mq(['Private schools','Tutoring centers','SAT &amp; ACT prep','Private colleges','Language schools','Coding bootcamps','Short courses']),
       'calc-fee-label':'Average fee per student ($)',
-      'chip-cost':'$0.07 per student chat',
+      'chip-cost':'$0.07 per student chat','stat-cost':'$0.07',
       'tag-school':'Pre-K to grade 12','tag-coaching':'SAT · ACT · AP · tutoring','title-coaching':'Tutoring &amp; test prep',
       'tag-college':'Associate · bachelor’s · certificates','desc-college':'Program-level campaigns timed to application deadlines.','tag-training':'Languages · IT · bootcamps',
       'proof-intro':'Unedited screenshots from education lead-generation campaigns we run. Figures from rupee and pound accounts are shown in US dollars, at about Rs 280 and £0.76 per dollar (October 2026).',
@@ -1073,7 +1150,7 @@ Call us</a>
       'hero-proof':'8,428 student conversations at about 5p each in one campaign.'+see,
       'marquee':mq(['Independent schools','Tutoring centres','11+ &amp; GCSE prep','Sixth forms &amp; colleges','English language schools','IT &amp; short courses']),
       'calc-fee-label':'Average fee per student (£)',
-      'chip-cost':'5p per student chat',
+      'chip-cost':'5p per student chat','stat-cost':'5p',
       'tag-school':'Nursery to sixth form','tag-coaching':'11+ · GCSE · A-level','title-coaching':'Tutoring centres',
       'tag-college':'Sixth form · FE · degree','desc-college':'Course-level campaigns timed to results day and application deadlines.','tag-training':'English · IT · short courses',
       'proof-intro':'Unedited screenshots from education lead-generation campaigns we run. Figures from dollar and rupee accounts are shown in pounds, at about $1.32 and Rs 370 per pound (October 2026).',
@@ -1091,7 +1168,7 @@ Call us</a>
       'hero-proof':'8,428 student conversations at about $0.07 each in one campaign.'+see,
       'marquee':mq(['Private schools','Tutoring &amp; test prep','Colleges &amp; universities','Language schools','IT &amp; coding courses','Training institutes']),
       'calc-fee-label':'Average fee per student (USD)',
-      'chip-cost':'$0.07 per student chat',
+      'chip-cost':'$0.07 per student chat','stat-cost':'$0.07',
       'tag-school':'Kindergarten to grade 12','tag-coaching':'IELTS · SAT · entrance exams','title-coaching':'Tutoring &amp; test prep',
       'tag-college':'Diplomas · degrees','desc-college':'Program-level campaigns timed to application deadlines.','tag-training':'Languages · IT · short courses',
       'proof-intro':'Unedited screenshots from education lead-generation campaigns we run. Figures from rupee and pound accounts are shown in US dollars, at about Rs 280 and £0.76 per dollar (October 2026).',
@@ -1122,7 +1199,7 @@ Call us</a>
   }
   function apply(key){
     var r=R[key]||R.pk, t=T[key]||{};
-    window.ENR={region:key,cur:r.cur};
+    window.ENR={region:key,cur:r.cur,wa:r.wa};
     origText.forEach(function(v,n){ n.nodeValue=v; }); origText.clear();
     els.forEach(function(el){ var k=el.getAttribute('data-l10n'); el.innerHTML=(t[k]!=null)?t[k]:origHTML.get(el); });
     origAttr.forEach(function(x){ var el=x[0],a=x[1],v=x[2];
@@ -1151,7 +1228,7 @@ Call us</a>
   var manual=null;
   try{ var q=new URLSearchParams(location.search).get('region'); if(q&&R[q]){ manual=q; localStorage.setItem('enr-region',q); } else { var s=localStorage.getItem('enr-region'); if(s&&R[s]) manual=s; } }catch(e){}
   var current=manual||fromTimezone();
-  if(current!=='pk') apply(current); else { window.ENR={region:'pk',cur:'PKR'}; var sel0=document.getElementById('region-select'); if(sel0) sel0.value='pk'; }
+  if(current!=='pk') apply(current); else { window.ENR={region:'pk',cur:'PKR',wa:'923411236082'}; var sel0=document.getElementById('region-select'); if(sel0) sel0.value='pk'; }
   if(!manual && window.fetch){
     fetch('/api/geo',{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(d){
       var k=d&&fromCountry(d.country); if(k&&k!==current){ current=k; apply(k); }
