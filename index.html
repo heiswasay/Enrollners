@@ -503,6 +503,72 @@ section[id]{scroll-margin-top:84px}
 .foot-col{display:flex;flex-direction:column;gap:12px;font-size:15px}
 .foot-col a{color:rgba(255,255,255,.85);text-decoration:none}.foot-col a:hover{color:#FFFFFF}
 .foot-h{font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+
+.mk-card{position:relative;border-radius:28px;background:#FFFFFF;border:1px solid rgba(20,26,43,.07);padding:clamp(24px,3vw,34px)}
+.mk-dark{background:#141A2B;color:#FFFFFF;border-color:transparent}
+.mk-n{font-size:12px;letter-spacing:.06em;color:#7C8295}
+.mk-h{margin:10px 0 0;font-size:26px;font-weight:600;letter-spacing:-.03em;line-height:1.15}
+.mk-p{margin:10px 0 0;font-size:16px;line-height:1.6;color:#5E6577}
+.mk-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:14px;font-weight:600;text-decoration:none}
+.mk-pill{display:inline-flex;gap:6px;align-items:center;padding:7px 12px;border-radius:999px;background:#FFFFFF;border:1px solid rgba(20,26,43,.08);font-size:13px;color:#4B5264}
+.mk-pill b{color:#141A2B}
+.mk-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:20px}
+.mk-stats div{padding:12px;border-radius:16px;background:#F4F6FB}
+.mk-stats b{display:block;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:28px;line-height:1;color:#141A2B}
+.mk-stats span{display:block;margin-top:6px;font-size:11.5px;line-height:1.3;color:#5E6577}
+.mk-ad{border-radius:20px;border:1px solid rgba(20,26,43,.08);background:#FFFFFF;box-shadow:0 30px 60px -34px rgba(20,26,43,.55);overflow:hidden;max-width:360px;margin-left:auto}
+.mk-chip{position:absolute;z-index:3;display:flex;flex-direction:column;gap:2px;padding:10px 14px;border-radius:14px;background:#FFFFFF;border:1px solid rgba(20,26,43,.08);box-shadow:0 18px 36px -18px rgba(20,26,43,.55)}
+.mk-chip b{font-size:18px;color:#141A2B}
+.mk-fast{font-size:10.5px;font-weight:600;padding:5px 9px;border-radius:999px;background:rgba(134,239,172,.15);color:#86EFAC;white-space:nowrap}
+.mk-msg{max-width:86%;padding:9px 12px 16px;border-radius:14px;font-size:13px;line-height:1.4;position:relative}
+.mk-msg i{position:absolute;right:9px;bottom:3px;font-style:normal;font-size:9.5px;opacity:.6}
+.mk-msg.in{align-self:flex-start;background:#1F3D32;border-top-left-radius:4px}
+.mk-msg.out{align-self:flex-end;background:#16A34A;border-top-right-radius:4px}
+.mk-qr{padding:6px 10px;border-radius:999px;border:1px solid rgba(134,239,172,.45);font-size:11.5px;color:#BBF7D0}
+.mk-phone{position:relative;width:min(100%,190px);aspect-ratio:9/16;border-radius:26px;padding:6px;background:#05070D;box-shadow:0 30px 60px -24px rgba(0,0,0,.8),inset 0 0 0 1.5px rgba(255,255,255,.12)}
+.mk-phone video{display:block;width:100%;height:100%;object-fit:cover;border-radius:20px;background:#0E1322}
+.mk-phone-sm{width:min(100%,150px);border-radius:22px;padding:5px}
+.mk-phone-sm video{border-radius:17px}
+.mk-rec{position:absolute;left:16px;top:16px;display:flex;align-items:center;gap:6px;padding:4px 8px;border-radius:6px;background:rgba(0,0,0,.45);font-family:'Geist Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.1em;color:#FFFFFF}
+.mk-rec i{width:7px;height:7px;border-radius:50%;background:#EF4444;animation:pulse 1.6s infinite}
+.mk-tag{position:absolute;z-index:2;padding:8px 12px;border-radius:999px;background:#FFFFFF;color:#141A2B;font-size:12px;font-weight:600;box-shadow:0 14px 28px -14px rgba(0,0,0,.6);white-space:nowrap}
+.mk-wall{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;height:440px;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent);padding-right:clamp(16px,2vw,24px)}
+.mk-col{overflow:hidden}
+.mk-track{display:flex;flex-direction:column;gap:10px;animation:mkUp 38s linear infinite}
+.mk-track.rev{animation-direction:reverse;animation-duration:44s}
+.mk-track img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 10px 24px -14px rgba(20,26,43,.5)}
+.mk-card:hover .mk-track{animation-play-state:paused}
+@keyframes mkUp{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+.mk-kanban{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.mk-kanban>div{display:flex;flex-direction:column;gap:6px;padding:8px;border-radius:14px;background:#F4F6FB}
+.mk-colh{display:flex;justify-content:space-between;font-size:10.5px;font-weight:600;color:#5E6577}
+.mk-colh em{font-style:normal;color:#4C65A3}
+.mk-lead{display:flex;flex-direction:column;gap:2px;padding:8px;border-radius:10px;background:#FFFFFF;border:1px solid rgba(20,26,43,.06);min-height:40px}
+.mk-lead b{font-size:11.5px;font-weight:600;color:#141A2B}
+.mk-lead span{font-size:9.5px;color:#7C8295}
+.mk-lead i{font-style:normal;font-size:9.5px;font-weight:600;color:#4C65A3}
+.mk-lead.dim{background:transparent;border-style:dashed}
+.mk-lead.hot{border-color:rgba(76,101,163,.35);box-shadow:0 8px 18px -12px rgba(76,101,163,.7)}
+.mk-lead.won{background:#4C65A3;border-color:#4C65A3}.mk-lead.won b,.mk-lead.won i{color:#FFFFFF}.mk-lead.won span{color:#C6D3EE}
+.mk-browser{border-radius:16px;border:1px solid rgba(20,26,43,.1);overflow:hidden;background:#FFFFFF;box-shadow:0 26px 50px -32px rgba(20,26,43,.6)}
+.mk-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#EDF0F6}
+.mk-bar span{width:8px;height:8px;border-radius:50%;background:#D6DCE8}
+.mk-bar em{margin-left:8px;flex:1;padding:4px 10px;border-radius:6px;background:#FFFFFF;font-style:normal;font-size:10.5px;color:#5E6577;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mk-report{padding:18px;border-radius:20px;border:1px solid rgba(20,26,43,.08);background:#FFFFFF;box-shadow:0 26px 50px -34px rgba(20,26,43,.55)}
+.mk-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px}
+.mk-kpis div{padding:10px 12px;border-radius:14px;background:#F4F6FB}
+.mk-kpis span{display:block;font-size:11px;color:#7C8295}
+.mk-kpis b{display:block;margin-top:4px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:28px;line-height:1}
+.mk-kpis em{display:block;margin-top:4px;font-style:normal;font-size:11px;font-weight:600;color:#16A34A}
+.mk-flag{position:absolute;left:50%;top:-30px;transform:translateX(-50%);padding:3px 8px;border-radius:999px;background:#16A34A;color:#FFFFFF;font-style:normal;font-size:10.5px;font-weight:700;white-space:nowrap}
+.mk-search{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:999px;border:1px solid rgba(20,26,43,.12);font-size:13px;color:#141A2B;box-shadow:0 10px 24px -18px rgba(20,26,43,.5)}
+.mk-result{display:flex;flex-direction:column;gap:3px;padding:12px 14px;border-radius:14px;background:#F4F6FB}
+.mk-result b{font-size:14px;font-weight:600;color:#1A3FA0}
+.mk-result span:last-child{font-size:11.5px;line-height:1.4;color:#5E6577}
+.mk-ai{display:flex;flex-direction:column;gap:5px;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,#EEF2FB,#F6F0FF);border:1px solid rgba(76,101,163,.18);font-size:12px;line-height:1.45;color:#343A4A}
+@media (max-width:900px){.mk-wall{height:360px}}
+@media (max-width:760px){.mk-stats b{font-size:19px;white-space:nowrap}.mk-stats div{padding:10px}.mk-chip-ad{top:58px!important;right:4px!important}.mk-ad [style*="font-size: 22px"]{font-size:17px!important}.mk-card[style*="minmax(0, 210px)"]{grid-template-columns:minmax(0,1fr)!important;padding-right:clamp(24px,3vw,34px)!important}.mk-wall{height:300px;grid-template-columns:repeat(2,minmax(0,1fr));padding-right:0}.mk-kanban{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (prefers-reduced-motion:reduce){.mk-track{animation:none}}
 </style>
 
 </head>
@@ -753,119 +819,193 @@ Call us</a>
 <section id="marketing" style="padding: clamp(80px, 10vw, 128px) 0; background: #F4F6FB">
 <div class="wrap">
 <div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 48px">
-<div style="max-width: 680px">
+<div style="max-width: 720px">
 <div class="mono" style="font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #4C65A3">— School &amp; academy marketing, in detail</div>
 <h2 style="margin: 18px 0 0; font-size: clamp(36px, 5vw, 62px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 500">Everything between the first click and the <span class="serif grad" style="font-style: italic; color: #4C65A3">first class.</span></h2>
 </div>
-<p style="margin: 0; max-width: 360px; font-size: 17px; line-height: 1.6; color: #4B5264">One team runs the whole admissions funnel, so nothing falls between an ad agency, a web designer and your front desk.</p>
+<div style="max-width: 380px">
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4B5264">One team runs the whole admissions funnel, so nothing falls between an ad agency, a web designer and your front desk.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px">
+<span class="mk-pill"><b>24</b> posts published</span><span class="mk-pill"><b>6</b> reels</span><span class="mk-pill"><b>10</b> SEO pages</span>
+</div>
+</div>
 </div>
 
 <div class="bento m-swipe">
 
-<!-- Campaigns -->
-<article class="b4 lift rv" style="position: relative; overflow: hidden; border-radius: 28px; background: #FFFFFF; border: 1px solid rgba(20,26,43,.07); padding: clamp(24px, 3vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 28px; align-items: center">
+<!-- 01 Campaigns -->
+<article class="b4 lift rv mk-card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px; align-items: center">
 <div>
-<div class="mono" style="font-size: 12px; color: #7C8295">01</div>
-<h3 style="margin: 10px 0 0; font-size: 26px; font-weight: 600; letter-spacing: -0.03em">Admissions campaigns</h3>
-<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #5E6577">Meta and Google ads planned around your intake calendar, with creative written for students and the parents who pay.</p>
+<div class="mono mk-n">01 · Meta &amp; Google ads</div>
+<h3 class="mk-h">Admissions campaigns</h3>
+<p class="mk-p">Meta and Google ads planned around your intake calendar, with creative written for students and the parents who pay.</p>
+<div class="mk-stats">
+<div><b>8,428</b><span>student chats</span></div>
+<div><b>~Rs 20</b><span>per chat</span></div>
+<div><b>68%</b><span>cheaper than similar ads</span></div>
 </div>
-<div class="float2" style="border-radius: 20px; border: 1px solid rgba(20,26,43,.08); background: #FFFFFF; box-shadow: 0 24px 48px -30px rgba(20,26,43,.45); overflow: hidden">
+<a class="mk-link" href="/admissions-marketing">Admission marketing in detail <svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div style="position: relative; padding: 8px 18px 18px 0">
+<div class="float2 mk-ad">
 <div style="display: flex; align-items: center; gap: 10px; padding: 12px 14px">
-<span style="width: 30px; height: 30px; border-radius: 10px; background: #141A2B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Instrument Serif', Georgia, serif; font-size: 18px">A</span>
-<div><div style="font-size: 13px; font-weight: 600">Your Institute</div><div style="font-size: 11px; color: #7C8295">Sponsored</div></div>
+<span style="width: 34px; height: 34px; border-radius: 50%; padding: 2px; background: conic-gradient(#FFD84D, #EF4444, #4C65A3, #FFD84D)"><span style="display: flex; width: 100%; height: 100%; border-radius: 50%; background: #141A2B; color: #FFFFFF; align-items: center; justify-content: center; font-family: 'Instrument Serif', Georgia, serif; font-size: 17px">S</span></span>
+<div style="flex: 1"><div style="font-size: 13px; font-weight: 600">Your School</div><div style="font-size: 11px; color: #7C8295">Sponsored · Karachi</div></div>
+<span style="font-size: 18px; color: #7C8295; line-height: 1">···</span>
 </div>
-<div style="height: 128px; background: #141A2B; position: relative; display: flex; align-items: end; padding: 16px; overflow: hidden">
-<div style="position: absolute; right: -30px; top: -30px; width: 140px; height: 140px; border-radius: 50%; border: 22px solid #738ABC; opacity: .9"></div>
-<div style="position: absolute; right: 40px; top: 40px; width: 50px; height: 50px; border-radius: 50%; background: #9DB8DF"></div>
-<div style="position: relative; color: #FFFFFF; font-size: 20px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1">Fall intake<br><span class="serif" style="font-style: italic; font-weight: 400; color: #AFC0E4">now open</span></div>
-</div>
-<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px">
-<span style="font-size: 12px; color: #5E6577">Limited seats per program</span>
-<span style="font-size: 12px; font-weight: 600; padding: 7px 12px; border-radius: 8px; background: #ECEFF6">Apply now</span>
+<div style="position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #DDE3EE">
+<img src="images/work/ad-classroom.webp" alt="Example admission ad showing a Pakistani classroom with students raising their hands" loading="lazy" width="640" height="640" style="display: block; width: 100%; height: 100%; object-fit: cover">
+<div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,26,43,0) 45%, rgba(20,26,43,.85) 100%)"></div>
+<div style="position: absolute; left: 16px; right: 16px; bottom: 14px; color: #FFFFFF">
+<div style="display: inline-block; padding: 4px 10px; border-radius: 999px; background: #FFD84D; color: #141A2B; font-size: 11px; font-weight: 700">Admissions open</div>
+<div style="margin-top: 8px; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1">Classes Montessori to O Level <span class="serif" style="font-style: italic; font-weight: 400; color: #AFC0E4">book a campus visit</span></div>
 </div>
 </div>
-</article>
-
-<!-- WhatsApp -->
-<article class="b2 lift rv" style="border-radius: 28px; background: #141A2B; color: #FFFFFF; padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
-<div style="display: flex; flex-direction: column; gap: 10px">
-<div style="align-self: flex-start; max-width: 88%; padding: 10px 14px; border-radius: 16px 16px 16px 4px; background: rgba(255,255,255,.1); font-size: 13px; line-height: 1.45">Is the IELTS evening batch still open?</div>
-<div style="align-self: flex-end; max-width: 88%; padding: 10px 14px; border-radius: 16px 16px 4px 16px; background: #4C65A3; font-size: 13px; line-height: 1.45">Yes! The next batch starts Monday. Shall I send the schedule and fee details?</div>
-<div class="typing" style="align-self: flex-start; display: flex; gap: 4px; padding: 12px 14px; border-radius: 16px; background: rgba(255,255,255,.1)"><span style="width: 6px; height: 6px; border-radius: 50%; background: #FFFFFF"></span><span style="width: 6px; height: 6px; border-radius: 50%; background: #FFFFFF"></span><span style="width: 6px; height: 6px; border-radius: 50%; background: #FFFFFF"></span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 14px">
+<span style="font-size: 12px; color: #5E6577">Limited seats · 2027 session</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; padding: 8px 12px; border-radius: 8px; background: #16A34A; color: #FFFFFF"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.8 7L3 21l2-6A8 8 0 1 1 21 12z" fill="#FFFFFF"></path></svg>Send message</span>
 </div>
-<div>
-<div class="mono" style="font-size: 12px; color: rgba(255,255,255,.55)">02</div>
-<h3 style="margin: 10px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.03em">WhatsApp follow-up</h3>
-<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.72)">Instant replies and reminders on the app where students actually answer.</p>
+</div>
+<div class="float1 mk-chip mk-chip-ad" style="right: -6px; top: 42%"><span class="mono" style="font-size: 10px; letter-spacing: .1em; color: #7C8295">COST PER CHAT</span><b>Rs 20 <em style="font-style: normal; color: #16A34A; font-size: 13px">↓ 68%</em></b></div>
 </div>
 </article>
 
-<!-- CRM -->
-<article class="b3 lift rv" style="border-radius: 28px; background: #FFFFFF; border: 1px solid rgba(20,26,43,.07); padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; gap: 26px">
-<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
-<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 11px; color: #7C8295">New</span><span style="height: 26px; border-radius: 8px; background: #E3EAF7"></span><span style="height: 26px; border-radius: 8px; background: #E3EAF7"></span><span style="height: 26px; border-radius: 8px; background: #E3EAF7"></span></div>
-<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 11px; color: #7C8295">Counselling</span><span style="height: 26px; border-radius: 8px; background: #C6D3EE"></span><span style="height: 26px; border-radius: 8px; background: #C6D3EE"></span></div>
-<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 11px; color: #7C8295">Applied</span><span style="height: 26px; border-radius: 8px; background: #9DB8DF"></span><span style="height: 26px; border-radius: 8px; background: #9DB8DF"></span></div>
-<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 11px; color: #7C8295">Enrolled</span><span style="height: 26px; border-radius: 8px; background: #4C65A3"></span></div>
+<!-- 02 WhatsApp -->
+<article class="b2 lift rv mk-card mk-dark" style="display: flex; flex-direction: column; justify-content: space-between; gap: 22px">
+<div style="border-radius: 22px; background: #0B2A1F; overflow: hidden; box-shadow: 0 24px 40px -24px rgba(0,0,0,.6)">
+<div style="display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: #0F3A2B">
+<span style="width: 30px; height: 30px; border-radius: 50%; background: #FFFFFF; color: #0F3A2B; display: flex; align-items: center; justify-content: center; font-family: 'Instrument Serif', Georgia, serif; font-size: 16px">S</span>
+<div style="flex: 1"><div style="font-size: 13px; font-weight: 600">Your School</div><div style="font-size: 11px; color: #86EFAC">online</div></div>
+<span class="mk-fast">⚡ replied in 9 sec</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 14px; background: #0B2A1F">
+<div class="mk-msg in">Hi, are Class 6 admissions open?<i>4:12 pm</i></div>
+<div class="mk-msg out">Yes! 🎉 Class 6 has seats for the new session. What would you like to know?<i>4:12 pm ✓✓</i></div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end"><span class="mk-qr">Fee structure</span><span class="mk-qr">Timings</span><span class="mk-qr">Book a visit</span></div>
+<div class="typing" style="align-self: flex-start; display: flex; gap: 4px; padding: 10px 12px; border-radius: 14px; background: #1F3D32"><span style="width: 6px; height: 6px; border-radius: 50%; background: #FFFFFF"></span><span style="width: 6px; height: 6px; border-radius: 50%; background: #FFFFFF"></span><span style="width: 6px; height: 6px; border-radius: 50%; background: #FFFFFF"></span></div>
+</div>
 </div>
 <div>
-<div class="mono" style="font-size: 12px; color: #7C8295">03</div>
-<h3 style="margin: 10px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.03em">Lead capture &amp; CRM</h3>
-<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #5E6577">Every inquiry logged, assigned to a counsellor and tracked until it becomes an enrollment.</p>
+<div class="mono mk-n" style="color: rgba(255,255,255,.55)">02 · Automation</div>
+<h3 class="mk-h" style="font-size: 24px">WhatsApp follow-up</h3>
+<p class="mk-p" style="color: rgba(255,255,255,.72); font-size: 15px">Instant replies, visit reminders and follow-ups on the app where parents actually answer.</p>
+<a class="mk-link" href="/whatsapp-automation" style="color: #AFC0E4">How it works <svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 </article>
 
-<!-- Landing pages -->
-<article class="b3 lift rv" style="border-radius: 28px; background: #FFFFFF; border: 1px solid rgba(20,26,43,.07); padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; gap: 26px">
-<div style="border-radius: 16px; border: 1px solid rgba(20,26,43,.09); overflow: hidden">
-<div style="display: flex; gap: 6px; padding: 10px 12px; background: #EDF0F6"><span style="width: 8px; height: 8px; border-radius: 50%; background: #D6DCE8"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #D6DCE8"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #D6DCE8"></span></div>
-<div style="padding: 16px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 14px; align-items: center">
-<div style="display: flex; flex-direction: column; gap: 8px"><span style="height: 12px; width: 90%; border-radius: 4px; background: #141A2B"></span><span style="height: 12px; width: 60%; border-radius: 4px; background: #141A2B"></span><span style="height: 7px; width: 80%; border-radius: 4px; background: #D6DCE8; margin-top: 4px"></span><span style="height: 22px; width: 54%; border-radius: 6px; background: #4C65A3; margin-top: 6px"></span></div>
-<div style="display: flex; flex-direction: column; gap: 6px; padding: 10px; border-radius: 10px; background: #F4F6FB"><span style="height: 14px; border-radius: 4px; background: #FFFFFF"></span><span style="height: 14px; border-radius: 4px; background: #FFFFFF"></span><span style="height: 14px; border-radius: 4px; background: #9DB8DF"></span></div>
+<!-- 03 Photo & video -->
+<article class="b2 lift rv mk-card mk-dark" style="display: flex; flex-direction: column; justify-content: space-between; gap: 22px; background: linear-gradient(160deg, #1B2440, #0E1322)">
+<div style="position: relative; display: flex; justify-content: center; padding-top: 4px">
+<div class="mk-phone">
+<video src="images/work/reel-tour.mp4" poster="images/work/reel-tour.webp" autoplay muted loop playsinline preload="metadata" aria-label="Enrollners reel: the 8-shot campus tour"></video>
+<span class="mk-rec"><i></i>REC</span>
 </div>
+<span class="mk-tag" style="left: 0; bottom: 22%">🎬 Campus tour</span>
+<span class="mk-tag" style="right: 0; top: 18%">📸 Teacher stories</span>
 </div>
 <div>
-<div class="mono" style="font-size: 12px; color: #7C8295">04</div>
-<h3 style="margin: 10px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.03em">High-converting landing pages</h3>
-<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #5E6577">A page for each program and intake, built to turn a click into a counselling request.</p>
+<div class="mono mk-n" style="color: rgba(255,255,255,.55)">03 · Photo &amp; video</div>
+<h3 class="mk-h" style="font-size: 24px">Shoots &amp; reels</h3>
+<p class="mk-p" style="color: rgba(255,255,255,.72); font-size: 15px">Campus tours, teacher stories, event days and video ads, planned shot by shot.</p>
+<a class="mk-link" href="/school-photography-videography" style="color: #AFC0E4">Photo &amp; video for schools <svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 </article>
 
-<!-- Content -->
-<article class="b2 lift rv" style="border-radius: 28px; background: #FFFFFF; border: 1px solid rgba(20,26,43,.07); padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; gap: 26px">
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
-<span style="aspect-ratio: 1; border-radius: 10px; background: #141A2B"></span>
-<span style="aspect-ratio: 1; border-radius: 10px; background: #9DB8DF"></span>
-<span style="aspect-ratio: 1; border-radius: 10px; background: #E3EAF7"></span>
-<span style="aspect-ratio: 1; border-radius: 10px; background: #E3EAF7"></span>
-<span style="aspect-ratio: 1; border-radius: 10px; background: #4C65A3"></span>
-<span style="aspect-ratio: 1; border-radius: 10px; background: #EDF0F6"></span>
-</div>
+<!-- 04 Content & social -->
+<article class="b4 lift rv mk-card" style="display: grid; grid-template-columns: minmax(0, 210px) minmax(0, 1fr); gap: 28px; align-items: stretch; padding-right: 0; overflow: hidden">
+<div style="display: flex; flex-direction: column; justify-content: space-between; gap: 18px; min-width: 0">
 <div>
-<div class="mono" style="font-size: 12px; color: #7C8295">05</div>
-<h3 style="margin: 10px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.03em">Content &amp; social</h3>
-<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #5E6577">Premium creative that earns trust with students and parents.</p>
+<div class="mono mk-n">04 · Content &amp; social</div>
+<h3 class="mk-h">Posts &amp; reels that earn trust</h3>
+<p class="mk-p" style="font-size: 15px">Carousels, reels and posts for Instagram, Facebook and LinkedIn. These are real ones from the Enrollners page.</p>
+</div>
+<div class="mk-phone mk-phone-sm">
+<video src="images/work/reel-ideas.mp4" poster="images/work/reel-ideas.webp" autoplay muted loop playsinline preload="metadata" aria-label="Enrollners reel: 10 post ideas"></video>
+</div>
+<a class="mk-link" href="https://www.instagram.com/enrollners/" target="_blank" rel="noopener">See @enrollners <svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="mk-wall" aria-label="Recent Enrollners posts">
+<div class="mk-col"><div class="mk-track"><img src="images/work/post-13.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-01.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-05.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-09.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-11.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-03.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-13.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-01.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-05.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-09.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-11.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-03.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"></div></div>
+<div class="mk-col"><div class="mk-track rev"><img src="images/work/post-07.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-12.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-02.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-14.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-10.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-04.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-07.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-12.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-02.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-14.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-10.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-04.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"></div></div>
+<div class="mk-col hide-sm"><div class="mk-track"><img src="images/work/post-06.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-16.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-08.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-15.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-13.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-09.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-06.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-16.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-08.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-15.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-13.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-09.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"></div></div>
 </div>
 </article>
 
-<!-- Reporting -->
-<article class="b4 lift rv" style="border-radius: 28px; background: #FFFFFF; border: 1px solid rgba(20,26,43,.07); padding: clamp(24px, 3vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 28px; align-items: end">
+<!-- 05 CRM -->
+<article class="b3 lift rv mk-card" style="display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
 <div>
-<div class="mono" style="font-size: 12px; color: #7C8295">06</div>
-<h3 style="margin: 10px 0 0; font-size: 26px; font-weight: 600; letter-spacing: -0.03em">Reporting that counts seats</h3>
-<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #5E6577">A clear monthly report showing cost per inquiry and cost per enrollment, program by program.</p>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px"><span class="mono" style="font-size: 10px; letter-spacing: .12em; color: #7C8295">ADMISSIONS PIPELINE · SAMPLE</span><span style="font-size: 11px; color: #16A34A; font-weight: 600">● Live</span></div>
+<div class="mk-kanban">
+<div><span class="mk-colh">New <em>18</em></span><div class="mk-lead"><b>Areeba K.</b><span>Class 6 · Meta ad</span></div><div class="mk-lead"><b>Hamza R.</b><span>O Level · Google</span></div><div class="mk-lead dim"></div></div>
+<div><span class="mk-colh">Contacted <em>11</em></span><div class="mk-lead"><b>Sana M.</b><span>Class 3 · WhatsApp</span></div><div class="mk-lead"><b>Bilal A.</b><span>MDCAT · Meta ad</span></div><div class="mk-lead"><b>Ayesha N.</b><span>Class 4 · Website</span></div></div>
+<div><span class="mk-colh">Visit booked <em>7</em></span><div class="mk-lead hot"><b>Fatima Z.</b><span>Class 9 · Walk-in</span><i>Sat 10 am</i></div><div class="mk-lead hot"><b>Omar S.</b><span>Class 7 · Meta ad</span><i>Mon 11 am</i></div></div>
+<div><span class="mk-colh">Enrolled <em>5</em></span><div class="mk-lead won"><b>Usman T.</b><span>Class 1 · Referral</span><i>✓ Fee paid</i></div><div class="mk-lead won"><b>Zara H.</b><span>Montessori · Meta ad</span><i>✓ Fee paid</i></div></div>
+</div>
+<div class="mk-kpis" style="margin-top: 10px"><div><span>First reply</span><b>4 min</b><em>avg</em></div><div><span>Follow-ups due</span><b>9</b><em>today</em></div><div><span>Leads lost</span><b>0</b><em>this week</em></div></div>
 </div>
 <div>
-<div style="display: flex; justify-content: space-between; font-size: 12px; color: #7C8295; margin-bottom: 12px"><span>Cost per enrollment</span><span>Month by month</span></div>
-<div style="display: flex; align-items: end; gap: 10px; height: 140px; border-bottom: 1px solid rgba(20,26,43,.12)">
-<span class="bar" style="flex: 1; height: 92%; border-radius: 8px 8px 0 0; background: #DCE4F4"></span>
+<div class="mono mk-n">05 · Software</div>
+<h3 class="mk-h" style="font-size: 24px">Lead capture &amp; CRM</h3>
+<p class="mk-p" style="font-size: 15px">Every inquiry logged, assigned to a counsellor and tracked until it becomes an enrolment.</p>
+<a class="mk-link" href="/school-software">School software &amp; CRM <svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</article>
+
+<!-- 06 Landing pages -->
+<article class="b3 lift rv mk-card" style="display: flex; flex-direction: column; gap: 24px">
+<div style="position: relative">
+<div class="mk-browser">
+<div class="mk-bar"><span></span><span></span><span></span><em>enrollners.com/admissions-marketing</em></div>
+<img src="images/work/lp-admissions.webp" alt="Screenshot of the Enrollners admission marketing landing page" loading="lazy" width="960" height="573" style="display: block; width: 100%; height: auto">
+</div>
+<div class="float1 mk-chip" style="right: 14px; bottom: -14px"><span class="mono" style="font-size: 10px; letter-spacing: .1em; color: #7C8295">NEW REQUEST</span><b style="font-size: 14px">📅 Campus visit booked</b></div>
+</div>
+<div>
+<div class="mono mk-n">06 · Websites</div>
+<h3 class="mk-h" style="font-size: 24px">High-converting landing pages</h3>
+<p class="mk-p" style="font-size: 15px">A page for each programme and intake, built to turn a click into a visit or a counselling request, like the ones on this site.</p>
+<a class="mk-link" href="/services">See our service pages <svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</article>
+
+<!-- 07 Reporting -->
+<article class="b4 lift rv mk-card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px; align-items: center">
+<div>
+<div class="mono mk-n">07 · Reporting</div>
+<h3 class="mk-h">Reporting that counts seats</h3>
+<p class="mk-p">A clear monthly report showing cost per inquiry and cost per enrolment, programme by programme. No vanity metrics.</p>
+<a class="mk-link" href="/education-ads-cost-pakistan">How education ad costs work <svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="mk-report">
+<div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 14px; font-weight: 600">Monthly admissions report</span><span class="mono" style="font-size: 10px; letter-spacing: .12em; color: #7C8295">SAMPLE</span></div>
+<div class="mk-kpis">
+<div><span>Inquiries</span><b>412</b><em>↑ 23%</em></div>
+<div><span>Visits</span><b>96</b><em>↑ 31%</em></div>
+<div><span>Enrolled</span><b>38</b><em>↑ 18%</em></div>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 11px; color: #7C8295; margin: 16px 0 8px"><span>Cost per enrolment</span><span>Month 1 → 6</span></div>
+<div style="display: flex; align-items: end; gap: 8px; height: 110px; border-bottom: 1px solid rgba(20,26,43,.12)">
+<span class="bar" style="flex: 1; height: 94%; border-radius: 8px 8px 0 0; background: #DCE4F4"></span>
 <span class="bar" style="flex: 1; height: 80%; border-radius: 8px 8px 0 0; background: #C6D3EE"></span>
 <span class="bar" style="flex: 1; height: 66%; border-radius: 8px 8px 0 0; background: #AFC0E4"></span>
-<span class="bar" style="flex: 1; height: 52%; border-radius: 8px 8px 0 0; background: #738ABC"></span>
-<span class="bar" style="flex: 1; height: 40%; border-radius: 8px 8px 0 0; background: #4C65A3"></span>
-<span class="bar" style="flex: 1; height: 32%; border-radius: 8px 8px 0 0; background: #34497E"></span>
+<span class="bar" style="flex: 1; height: 54%; border-radius: 8px 8px 0 0; background: #738ABC"></span>
+<span class="bar" style="flex: 1; height: 42%; border-radius: 8px 8px 0 0; background: #4C65A3"></span>
+<span class="bar" style="flex: 1; height: 33%; border-radius: 8px 8px 0 0; background: #34497E; position: relative"><i class="mk-flag">−65%</i></span>
 </div>
-<div style="display: flex; justify-content: space-between; font-size: 11px; color: #7C8295; margin-top: 8px"><span>Month 1</span><span>Month 6</span></div>
+</div>
+</article>
+
+<!-- 08 Search & AI -->
+<article class="b2 lift rv mk-card" style="display: flex; flex-direction: column; justify-content: space-between; gap: 22px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div class="mk-search"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="#7C8295" stroke-width="2"></circle><path d="m20 20-3.5-3.5" stroke="#7C8295" stroke-width="2" stroke-linecap="round"></path></svg><span>school marketing agency pakistan</span></div>
+<div class="mk-result"><span class="mono" style="font-size: 10px; color: #16A34A">enrollners.com › private-school-marketing</span><b>Private School Marketing in Pakistan</b><span>Admission-season campaigns, campus visit bookings and WhatsApp follow-up…</span></div>
+<div class="mk-ai"><span class="mono" style="font-size: 10px; letter-spacing: .1em; color: #4C65A3">✦ AI ANSWER</span><span><b>Enrollners</b> is an education marketing agency that helps schools and academies in Pakistan get more admissions…</span></div>
+</div>
+<div>
+<div class="mono mk-n">08 · SEO, AEO &amp; GEO</div>
+<h3 class="mk-h" style="font-size: 24px">Found on Google &amp; AI</h3>
+<p class="mk-p" style="font-size: 15px">Pages, FAQs and structured data so search engines and AI assistants can find you and quote you.</p>
 </div>
 </article>
 
