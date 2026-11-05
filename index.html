@@ -567,7 +567,41 @@ section[id]{scroll-margin-top:84px}
 .mk-result span:last-child{font-size:11.5px;line-height:1.4;color:#5E6577}
 .mk-ai{display:flex;flex-direction:column;gap:5px;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,#EEF2FB,#F6F0FF);border:1px solid rgba(76,101,163,.18);font-size:12px;line-height:1.45;color:#343A4A}
 @media (max-width:900px){.mk-wall{height:360px}}
-@media (max-width:760px){.mk-stats b{font-size:19px;white-space:nowrap}.mk-stats div{padding:10px}.mk-chip-ad{top:58px!important;right:4px!important}.mk-ad [style*="font-size: 22px"]{font-size:17px!important}.mk-card[style*="minmax(0, 210px)"]{grid-template-columns:minmax(0,1fr)!important;padding-right:clamp(24px,3vw,34px)!important}.mk-wall{height:300px;grid-template-columns:repeat(2,minmax(0,1fr));padding-right:0}.mk-kanban{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+#marketing{padding-top:56px!important;padding-bottom:56px!important}
+#marketing .rv{animation:none!important;opacity:1!important;transform:none!important}
+#marketing .wrap>.rv{margin-bottom:24px!important}
+#marketing h2{font-size:34px!important}
+.mk-bento{gap:12px!important}
+.mk-card{padding:20px!important;border-radius:22px}
+.mk-card.lift:hover{transform:none}
+.mk-h,.mk-card h3.mk-h{font-size:21px!important;margin-top:6px}
+.mk-p,.mk-card p.mk-p{font-size:14.5px!important;line-height:1.55;margin-top:6px}
+.mk-n{font-size:11px}
+.mk-link{margin-top:10px;font-size:13.5px}
+.mk-hide-m{display:none!important}
+.mk-camp{gap:18px!important}
+.mk-stats{margin-top:14px;gap:6px}.mk-stats div{padding:9px}.mk-stats b{font-size:19px;white-space:nowrap}.mk-stats span{font-size:10.5px}
+.mk-camp>div:last-child{padding:4px 10px 4px 0!important}
+.mk-ad{max-width:290px;margin:0 auto}
+.mk-ad [style*="font-size: 22px"]{font-size:16px!important}
+.mk-chip-ad{top:74px!important;bottom:auto!important;right:0!important;padding:8px 11px}.mk-chip-ad b{font-size:15px}
+.mk-dark>div:first-child{border-radius:18px}
+.mk-msg{font-size:12.5px}
+.mk-photo{display:grid!important;grid-template-columns:118px minmax(0,1fr);gap:16px!important;align-items:center}
+.mk-photo .mk-phone{width:118px;border-radius:18px;padding:4px}.mk-photo .mk-phone video{border-radius:14px}
+.mk-photo>div:first-child{padding-top:0!important}
+.mk-content{grid-template-columns:minmax(0,1fr)!important;gap:16px!important;padding-right:20px!important}
+.mk-content>div:first-child{gap:0!important}
+.mk-wall{height:300px;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding-right:0}
+.mk-track{gap:8px}.mk-track img{border-radius:9px}
+.mk-kanban{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.mk-kanban>div{padding:7px}
+.mk-kpis b{font-size:22px}.mk-kpis div{padding:8px 10px}
+.mk-report{padding:14px}
+.mk-flag{top:-26px}
+.mk-browser img{max-height:210px;object-fit:cover;object-position:top}
+}
 @media (prefers-reduced-motion:reduce){.mk-track{animation:none}}
 </style>
 
@@ -831,10 +865,10 @@ Call us</a>
 </div>
 </div>
 
-<div class="bento m-swipe">
+<div class="bento mk-bento">
 
 <!-- 01 Campaigns -->
-<article class="b4 lift rv mk-card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px; align-items: center">
+<article class="b4 lift rv mk-card mk-camp" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px; align-items: center">
 <div>
 <div class="mono mk-n">01 · Meta &amp; Google ads</div>
 <h3 class="mk-h">Admissions campaigns</h3>
@@ -894,14 +928,14 @@ Call us</a>
 </article>
 
 <!-- 03 Photo & video -->
-<article class="b2 lift rv mk-card mk-dark" style="display: flex; flex-direction: column; justify-content: space-between; gap: 22px; background: linear-gradient(160deg, #1B2440, #0E1322)">
+<article class="b2 lift rv mk-card mk-dark mk-photo" style="display: flex; flex-direction: column; justify-content: space-between; gap: 22px; background: linear-gradient(160deg, #1B2440, #0E1322)">
 <div style="position: relative; display: flex; justify-content: center; padding-top: 4px">
 <div class="mk-phone">
 <video src="images/work/reel-tour.mp4" poster="images/work/reel-tour.webp" autoplay muted loop playsinline preload="metadata" aria-label="Enrollners reel: the 8-shot campus tour"></video>
 <span class="mk-rec"><i></i>REC</span>
 </div>
-<span class="mk-tag" style="left: 0; bottom: 22%">🎬 Campus tour</span>
-<span class="mk-tag" style="right: 0; top: 18%">📸 Teacher stories</span>
+<span class="mk-tag mk-hide-m" style="left: 0; bottom: 22%">🎬 Campus tour</span>
+<span class="mk-tag mk-hide-m" style="right: 0; top: 18%">📸 Teacher stories</span>
 </div>
 <div>
 <div class="mono mk-n" style="color: rgba(255,255,255,.55)">03 · Photo &amp; video</div>
@@ -912,14 +946,14 @@ Call us</a>
 </article>
 
 <!-- 04 Content & social -->
-<article class="b4 lift rv mk-card" style="display: grid; grid-template-columns: minmax(0, 210px) minmax(0, 1fr); gap: 28px; align-items: stretch; padding-right: 0; overflow: hidden">
+<article class="b4 lift rv mk-card mk-content" style="display: grid; grid-template-columns: minmax(0, 210px) minmax(0, 1fr); gap: 28px; align-items: stretch; padding-right: 0; overflow: hidden">
 <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 18px; min-width: 0">
 <div>
 <div class="mono mk-n">04 · Content &amp; social</div>
 <h3 class="mk-h">Posts &amp; reels that earn trust</h3>
 <p class="mk-p" style="font-size: 15px">Carousels, reels and posts for Instagram, Facebook and LinkedIn. These are real ones from the Enrollners page.</p>
 </div>
-<div class="mk-phone mk-phone-sm">
+<div class="mk-phone mk-phone-sm mk-hide-m">
 <video src="images/work/reel-ideas.mp4" poster="images/work/reel-ideas.webp" autoplay muted loop playsinline preload="metadata" aria-label="Enrollners reel: 10 post ideas"></video>
 </div>
 <a class="mk-link" href="https://www.instagram.com/enrollners/" target="_blank" rel="noopener">See @enrollners <svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
@@ -927,7 +961,7 @@ Call us</a>
 <div class="mk-wall" aria-label="Recent Enrollners posts">
 <div class="mk-col"><div class="mk-track"><img src="images/work/post-13.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-01.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-05.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-09.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-11.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-03.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-13.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-01.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-05.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-09.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-11.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-03.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"></div></div>
 <div class="mk-col"><div class="mk-track rev"><img src="images/work/post-07.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-12.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-02.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-14.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-10.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-04.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-07.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-12.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-02.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-14.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-10.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-04.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"></div></div>
-<div class="mk-col hide-sm"><div class="mk-track"><img src="images/work/post-06.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-16.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-08.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-15.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-13.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-09.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-06.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-16.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-08.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-15.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-13.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-09.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"></div></div>
+<div class="mk-col"><div class="mk-track"><img src="images/work/post-06.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-16.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-08.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-15.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-13.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-09.webp" alt="Enrollners social post" loading="lazy" width="320" height="400"><img src="images/work/post-06.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-16.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-08.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-15.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-13.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"><img src="images/work/post-09.webp" alt="" aria-hidden="true" loading="lazy" width="320" height="400"></div></div>
 </div>
 </article>
 
